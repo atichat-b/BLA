@@ -97,7 +97,7 @@
 						<div class="controls">
 							<select id="country" name="country" class="input">
 								<option value="" selected="selected">กรุณาเลือกจังหวัด</option>
-								<option value="AF">Afghanistan</option>
+								<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
 								<option value="AL">Albania</option>
 								<option value="DZ">Algeria</option>
 								<option value="AS">American Samoa</option>
