@@ -12,7 +12,7 @@
 		<script>
 			$(function() {
 				$("#birthday").datepicker({
-					dateFormat : 'dd-mm-yy'
+					dateFormat : 'yy-mm-dd'
 				});
 			});
 		</script>
@@ -21,7 +21,8 @@
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 30px;">
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
 			<p class="page_title"></p>
-			<form class="well span11 form-horizontal" style="float:none;margin:0 auto">
+			<?php echo form_open_multipart('index.php/register/insert', array('class' => 'well span11 form-horizontal', 'name' => 'frm_check')); ?>
+	
 				<fieldset>
 					<!-- Genaral form -->
 					<h4>ข้อมูลทั่วไป</h4>
@@ -30,21 +31,21 @@
 					<div class="control-group">
 						<label class="control-label">ชื่อ</label>
 						<div class="controls">
-							<input id="first-name" name="full-name" type="text" placeholder="ชื่อ" class="input">
+							<input id="first-name" name="f_name" type="text" placeholder="ชื่อ" class="input">
 						</div>
 					</div>
 					<!-- last-name input-->
 					<div class="control-group">
 						<label class="control-label">นามสกุล</label>
 						<div class="controls">
-							<input id="last-name" name="last-name" type="text" placeholder="นามสกุล" class="input">
+							<input id="last-name" name="s_name" type="text" placeholder="นามสกุล" class="input">
 						</div>
 					</div>
 					<!-- nick-name input-->
 					<div class="control-group">
 						<label class="control-label">ชื่อเล่น</label>
 						<div class="controls">
-							<input id="nick-name" name="nick-name" type="text" placeholder="ชื่อเล่น" class="input">
+							<input id="nick-name" name="n_name" type="text" placeholder="ชื่อเล่น" class="input">
 						</div>
 					</div>
 					<!-- Birthday input-->
