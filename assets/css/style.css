@@ -1,0 +1,66 @@
+@font-face {
+	font-family: hel_45li;
+	src: url('Helvethaica_45.ttf'), url('Helvethaica_45.eot'); /* IE9 */
+}
+@font-face {
+	font-family: hel_55;
+	src: url('Helvethaica_55.ttf'), url('Helvethaica_55.eot'); /* IE9 */
+}
+body {
+	background: #D8E9FF;
+	background-repeat: repeat-x;
+	display: block;
+	margin: 30px auto 0px;
+}
+.logo {
+	width: 280px;
+	margin-left: 17px;
+	margin-top: 12px;
+	margin-bottom: 20px;
+}
+.content {
+	width: 963px;
+	height: 720px;
+	padding: 0 0 14px 0;
+	margin: 10px auto;
+	background: #FFFFFF bottom left no-repeat;
+	font-size: 12px;
+	border-radius: 4px;
+	box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5);
+}
+.page_title {
+	font-family: hel_45li;
+	background: #0EACDA;
+	color: #FFFFFF;
+	font-size: 26px;
+	text-align: center;
+	margin-top:20px;
+	height:30px;
+}
+p:first-child {
+	font-family: hel_45li;
+	background: #0EACDA;
+	color: #FFFFFF;
+	font-size: 26px;
+	text-align: center;
+	margin-bottom: 0px; 
+	margin-top: 0px;
+}
+#sign-up {
+	width: 270px;
+	margin: 200px auto;
+	box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.4);
+}
+
+#sign-up fieldset {
+	border:0px;
+}
+#sign-up label {
+	display: inline-block;
+	font: bold 20px "hel_45li", Verdana, sans-serif;
+	line-height: 1.5em;
+	color: #dc692e;
+}
+#sign-up input{
+	float: right;
+}
