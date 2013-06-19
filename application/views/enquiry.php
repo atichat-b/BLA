@@ -3,21 +3,23 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>กรุงเทพประกันชีวิต</title>
-		<link rel="stylesheet" href="css/style.css" type="text/css">
-		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-		<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-		<script src="js/jquery-1.9.1.js"></script>
-		<script src="js/jquery-ui-1.10.3.custom.js"></script>
+		<link rel="stylesheet" href="<?=base_url(); ?>assets/css/style.css" type="text/css">
+		<link rel="stylesheet" href="<?=base_url(); ?>assets/css/bootstrap.css" type="text/css">
+		<link href="<?=base_url(); ?>assets/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+		<script src="<?=base_url(); ?>assets/js/jquery-1.9.1.js"></script>
+		<script src="<?=base_url(); ?>assets/js/jquery-ui-1.10.3.custom.js"></script>
 
 		<script>
 			$(function() {
-				$("#birthday").datepicker();
+				$("#birthday").datepicker({
+					dateFormat : 'dd-mm-yy'
+				});
 			});
 		</script>
 	</head>
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 30px;">
-			<img src="images/logo.png" class="logo"/>
+			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
 			<p class="page_title"></p>
 			<form class="well span11 form-horizontal" style="float:none;margin:0 auto">
 				<fieldset>
@@ -136,21 +138,24 @@
 					<div class="control-group">
 						<label class="control-label">รายได้ประจำ</label>
 						<div class="controls">
-							<input id="main_income" name="main_income" type="text" placeholder="รายได้ประจำ" class="input"> ต่อเดือน
+							<input id="main_income" name="main_income" type="text" placeholder="รายได้ประจำ" class="input">
+							ต่อเดือน
 						</div>
 					</div>
 					<!-- moblie input -->
 					<div class="control-group">
 						<label class="control-label">รายได้อื่นๆ</label>
 						<div class="controls">
-							<input id="other_income" name="other_income" type="text" placeholder="รายได้อื่นๆ" class="input"> ต่อเดือน
+							<input id="other_income" name="other_income" type="text" placeholder="รายได้อื่นๆ" class="input">
+							ต่อเดือน
 						</div>
 					</div>
 					<!-- moblie input -->
 					<div class="control-group">
 						<label class="control-label">รายได้รวม</label>
 						<div class="controls">
-							<input id="sum_income" name="sum_income" type="text" placeholder="รายได้รวม" class="input"> ต่อเดือน
+							<input id="sum_income" name="sum_income" type="text" placeholder="รายได้รวม" class="input">
+							ต่อเดือน
 						</div>
 					</div>
 					<!-- submit input -->
