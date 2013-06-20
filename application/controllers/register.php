@@ -27,8 +27,12 @@ class register extends CI_Controller {
 		$email = $this -> input -> post('email');
 		$telephone = $this -> input -> post('telephone');
 		$mobile = $this -> input -> post('mobile');
+		$income_salary = $this->input->post('income_salary');
+		$income_other = $this->input->post('income_other');
+		$income_total = $this->input->post('income_total');
 		$param = array('F_Name' => $F_Name, 'L_Name' => $S_Name, 'N_Name' => $N_Name, 'BirthDay' => $birthday,'Old' => $old, 'Sex' => $sex, 'Status' => $status,
-		 'Address' => $address, 'Country' => $country, 'Postcode' => $postcode, 'Email' => $email, 'Tel' => $telephone, 'Mobile' => $mobile);
+		 'Address' => $address, 'Country' => $country, 'Postcode' => $postcode, 'Email' => $email, 'Tel' => $telephone, 'Mobile' => $mobile,
+		 'Income_money'=>$income_salary,'Income_other'=>$income_other,'Income_total'=>$income_total);
 		//echo "<pre>" . json_encode($param);
 		$this -> register -> insert_db($param);
 		$alert = html_entity_decode("บันทึกข้อมูลเรียบร้อย");

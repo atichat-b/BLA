@@ -11,6 +11,7 @@
 			<p class="page_title">
 				โปรแกรมช่วยในการวางแผนด้านการเงิน
 			</p>
+			<?=base_url().'assets/css/style.css';?>
 			<form id="sign-up">
 				<p class="title">
 					Login

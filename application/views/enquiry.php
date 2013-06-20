@@ -214,7 +214,7 @@
 					<div class="control-group">
 						<label class="control-label">รายได้ประจำ</label>
 						<div class="controls">
-							<input id="main_income" name="main_income" type="text" placeholder="รายได้ประจำ" class="input">
+							<input id="income_saraly" name="income_saraly" type="text" placeholder="รายได้ประจำ" class="input">
 							ต่อเดือน
 						</div>
 					</div>
@@ -222,7 +222,7 @@
 					<div class="control-group">
 						<label class="control-label">รายได้อื่นๆ</label>
 						<div class="controls">
-							<input id="other_income" name="other_income" type="text" placeholder="รายได้อื่นๆ" class="input">
+							<input id="income_other" name="income_other" type="text" placeholder="รายได้อื่นๆ" class="input">
 							ต่อเดือน
 						</div>
 					</div>
@@ -230,7 +230,7 @@
 					<div class="control-group">
 						<label class="control-label">รายได้รวม</label>
 						<div class="controls">
-							<input id="sum_income" name="sum_income" type="text" placeholder="รายได้รวม" class="input">
+							<input id="income_total" name="income_total" type="text" placeholder="รายได้รวม" class="input">
 							ต่อเดือน
 						</div>
 					</div>
