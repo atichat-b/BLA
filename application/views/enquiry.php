@@ -16,6 +16,7 @@
 				});
 			});
 		</script>
+
 		<script>
 			function Total() {
 				var total = document.getElementById('income_total');
@@ -27,20 +28,29 @@
 				}
 			}
 		</script>
-		<script>
-			function Convertdate() {
-				today = new Date()
-				var birthday = document.getElementById('birthday').value;
-				var old = document.getElementById('old');
-				var year = today.getUTCFullYear();
-				var month = today.getUTCMonth();
-				//var day = today.getDate();
-				newdate = year + "-" + month;
-				alert(birthday + " " + newdate);
-				var one_day = 1000 * 60 * 60 * 24
-				document.write(Math.ceil((birthday - newdate) / (one_day)))
+		<script language="javascript">
+			function Convertdate(o) {
+				var old = document.getElementById("old");
+				var tmp = document.getElementById("birthday").value.substring(0, 4);
+				var current = new Date();
+				var current_year = current.getFullYear();
+				old.value = current_year - tmp;
 			}
 		</script>
+		<!--<script>
+		function Convertdate() {
+		today = new Date()
+		var birthday = document.getElementById('birthday').value;
+		var old = document.getElementById('old');
+		var year = today.getUTCFullYear();
+		var month = today.getUTCMonth();
+		//var day = today.getDate();
+		newdate = year + "-" + month;
+		alert(birthday + " " + newdate);
+		var one_day = 1000 * 60 * 60 * 24
+		document.write(Math.ceil((birthday - newdate) / (one_day)))
+		}
+		</script>-->
 	</head>
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 30px;">
@@ -76,7 +86,7 @@
 				<div class="control-group">
 					<label class="control-label">วันเกิด</label>
 					<div class="controls">
-						<input id="birthday" name="birthday" placeholder="วัน/เดือน/ปี " type="text" onchange="Convertdate()">
+						<input id="birthday" name="birthday" placeholder="วัน/เดือน/ปี " type="text" onchange="Convertdate(this)">
 					</div>
 				</div>
 				<!-- Old input-->
@@ -237,7 +247,7 @@
 				<div class="control-group">
 					<label class="control-label">รายได้ประจำ</label>
 					<div class="controls">
-						<input id="income_salary" name="income_salary" type="text" placeholder="รายได้ประจำ" class="input" onKeyup="Total()">
+						<input id="income_salary" name="income_salary" type="text" placeholder="รายได้ประจำ" class="input" onKeyup="Total()"  OnChange="JavaScript:chkNum(this)">
 						ต่อเดือน
 					</div>
 				</div>
@@ -245,7 +255,7 @@
 				<div class="control-group">
 					<label class="control-label">รายได้อื่นๆ</label>
 					<div class="controls">
-						<input id="income_other" name="income_other" type="text" placeholder="รายได้อื่นๆ" class="input" onKeyup="Total()">
+						<input id="income_other" name="income_other" type="text" placeholder="รายได้อื่นๆ" class="input" onKeyup="Total()"  OnChange="JavaScript:chkNum(this)">
 						ต่อเดือน
 					</div>
 				</div>
