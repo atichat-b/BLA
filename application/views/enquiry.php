@@ -261,7 +261,7 @@
 							ตกลง
 						</button>
 						&nbsp;
-						<button class="btn">
+						<button class="btn" type="reset" onclick="javascript:window.location.href='user'">
 							ยกเลิก
 						</button>
 					</div>

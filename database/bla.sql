@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2013 at 04:54 PM
+-- Generation Time: Jun 21, 2013 at 07:34 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -28,26 +28,38 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `bla_customer` (
   `Customer_ID` int(5) NOT NULL AUTO_INCREMENT,
-  `NameCustomer` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `SurnameCustomer` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `NickName` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `F_Name` varchar(100) NOT NULL,
+  `L_Name` varchar(100) NOT NULL,
+  `N_Name` varchar(50) NOT NULL,
   `BirthDay` date NOT NULL,
-  `Sex` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `Status` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `Address` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `Country` int(20) NOT NULL,
-  `Code` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `CallHome` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `Telephone` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `Other` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `Expense` int(10) NOT NULL,
-  `Installments` int(10) NOT NULL,
-  `SaveMoney` int(10) NOT NULL,
-  `ExpenseOther` int(10) NOT NULL,
-  `Revenue` int(10) NOT NULL,
-  `RevenueOther` int(10) NOT NULL,
+  `Old` int(2) NOT NULL,
+  `Sex` varchar(20) NOT NULL,
+  `Status` varchar(20) NOT NULL,
+  `Address` varchar(255) NOT NULL,
+  `Country` varchar(255) NOT NULL,
+  `Postcode` int(5) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Tel` int(10) NOT NULL,
+  `Mobile` int(10) NOT NULL,
+  `Income_money` float NOT NULL,
+  `Income_other` float NOT NULL,
+  `Income_total` float NOT NULL,
   PRIMARY KEY (`Customer_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='ข้อมูลลูกค้า' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='ข้อมูลลูกค้า' AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `bla_customer`
+--
+
+INSERT INTO `bla_customer` (`Customer_ID`, `F_Name`, `L_Name`, `N_Name`, `BirthDay`, `Old`, `Sex`, `Status`, `Address`, `Country`, `Postcode`, `Email`, `Tel`, `Mobile`, `Income_money`, `Income_other`, `Income_total`) VALUES
+(1, 'dsad', 'dsada', 'dsad', '2013-06-19', 18, 'male', 'singel', 'dsad', 'DZ', 84110, 'dd', 0, 0, 0, 0, 0),
+(2, 'dsad', 'dsada', 'dsad', '2013-06-19', 18, 'male', 'singel', 'dsad', 'DZ', 84110, 'dd', 0, 0, 0, 0, 0),
+(3, 'dsad', 'dsada', 'dsad', '0000-00-00', 18, 'male', 'singel', 'dsad', 'DZ', 84110, 'dd', 0, 0, 0, 0, 0),
+(4, 'fdfd', 'dfdf', 'fdf', '2013-06-19', 0, '0', 'singel', 'fff', '', 0, 'f', 0, 0, 0, 0, 0),
+(5, 'fdfd', 'dfdf', 'fdf', '2013-06-04', 0, 'male', 'singel', 'fff', 'AS', 0, 'f', 0, 0, 0, 0, 0),
+(6, 'อติชาติ', 'แซ่แต้', 'แบงค์', '1989-11-04', 24, '0', 'singel', '159', 'กรุงเทพมหานคร', 10900, 'bank_84@hotmail.com', 868853864, 868853864, 26700, 5000, 31700),
+(7, 'อติชาติ', 'แซ่แต้', 'แบงค์', '1989-11-04', 24, 'male', 'singel', '159', 'กรุงเทพมหานคร', 10900, 'bank_84@hotmail.com', 868853864, 868853864, 26700, 5000, 31700),
+(8, 'อติชาติ', 'แซ่แต้', 'แบงค์', '1989-11-04', 24, 'male', 'singel', '159', 'กรุงเทพมหานคร', 10900, 'bank_84@hotmail.com', 868853864, 868853864, 26700, 5000, 31700);
 
 -- --------------------------------------------------------
 
@@ -114,13 +126,20 @@ CREATE TABLE IF NOT EXISTS `bla_report` (
 --
 
 CREATE TABLE IF NOT EXISTS `bla_users` (
-  `id` int(10) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `f_name` varchar(100) CHARACTER SET utf8 NOT NULL,
   `l_name` varchar(100) CHARACTER SET utf8 NOT NULL,
   `username` varchar(100) CHARACTER SET utf8 NOT NULL,
   `password` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='ข้อมูลตัวแทน';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='ข้อมูลตัวแทน' AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `bla_users`
+--
+
+INSERT INTO `bla_users` (`id`, `f_name`, `l_name`, `username`, `password`) VALUES
+(1, 'Admin', 'admin', 'admin', '1234');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
