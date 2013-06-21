@@ -11,23 +11,22 @@
 			<p class="page_title">
 				โปรแกรมช่วยในการวางแผนด้านการเงิน
 			</p>
-			<?=base_url().'assets/css/style.css';?>
-			<form id="sign-up">
-				<p class="title">
-					Login
-				</p>
-				<fieldset>
-					<label>UserName : </label>
-					<input type="text" id="username" />
-				</fieldset>
-				<fieldset>
-					<label>Password : </label>
-					<input type="text" id="password" />
-				</fieldset>
-				<fieldset>
-					<input type="submit" value="Login" />
-				</fieldset>
-			</form>
+			<?php echo form_open('/login', array('id' => 'sign-up')); ?>
+			<p class="title">
+				Login
+			</p>
+			<fieldset>
+				<label>UserName : </label>
+				<input type="text" id="username" name="username" />
+			</fieldset>
+			<fieldset>
+				<label>Password : </label>
+				<input type="password" id="password" name="password" />
+			</fieldset>
+			<fieldset>
+				<input type="submit" value="Login" />
+			</fieldset>
+			<?=form_close(); ?>
 		</div>
 	</body>
 </html>

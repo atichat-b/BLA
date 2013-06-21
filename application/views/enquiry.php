@@ -12,8 +12,8 @@
 		<script>
 			$(function() {
 				$("#birthday").datepicker({
-					changeMonth: true,
-     				changeYear: true,
+					changeMonth : true,
+					changeYear : true,
 					dateFormat : 'yy-mm-dd'
 				});
 			});
@@ -58,7 +58,7 @@
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 30px;">
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
 			<p class="page_title"></p>
-			<?php echo form_open_multipart('index.php/register/insert', array('class' => 'well span11 form-horizontal', 'name' => 'frm_check')); ?>
+			<?php echo form_open_multipart('/register/insert', array('class' => 'well span11 form-horizontal', 'name' => 'frm_check')); ?>
 
 			<fieldset>
 				<!-- Genaral form -->
@@ -282,7 +282,7 @@
 					</div>
 				</div>
 			</fieldset>
-			</form>
+			<?=form_close(); ?>
 		</div>
 	</body>
 </html>
