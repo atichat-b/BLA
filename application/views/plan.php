@@ -29,7 +29,7 @@
 							<a href="#">Link</a>
 						</li>
 						<li>
-							<a href="#">Link</a>
+							<a href="#"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?></a>
 						</li>
 					</ul>
 				</div>

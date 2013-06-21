@@ -18,7 +18,6 @@
 				});
 			});
 		</script>
-
 		<script>
 			function Total() {
 				var total = document.getElementById('income_total');
@@ -30,7 +29,7 @@
 				}
 			}
 		</script>
-		<script language="javascript">
+		<script>
 			function Convertdate(o) {
 				var old = document.getElementById("old");
 				var tmp = document.getElementById("birthday").value.substring(0, 4);
@@ -39,20 +38,6 @@
 				old.value = current_year - tmp;
 			}
 		</script>
-		<!--<script>
-		function Convertdate() {
-		today = new Date()
-		var birthday = document.getElementById('birthday').value;
-		var old = document.getElementById('old');
-		var year = today.getUTCFullYear();
-		var month = today.getUTCMonth();
-		//var day = today.getDate();
-		newdate = year + "-" + month;
-		alert(birthday + " " + newdate);
-		var one_day = 1000 * 60 * 60 * 24
-		document.write(Math.ceil((birthday - newdate) / (one_day)))
-		}
-		</script>-->
 	</head>
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 30px;">
