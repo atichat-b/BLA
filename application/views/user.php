@@ -8,12 +8,6 @@
 		<link href="<?=base_url(); ?>assets/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 		<script src="<?=base_url(); ?>assets/js/jquery-1.9.1.js"></script>
 		<script src="<?=base_url(); ?>assets/js/jquery-ui-1.10.3.custom.js"></script>
-
-		<script>
-			$(function() {
-				$("#birthday").datepicker();
-			});
-		</script>
 	</head>
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 500px;">
@@ -50,72 +44,31 @@
 				        </tr>
 				      </thead>
 				      <tbody>
+				      	<?php 
+				      	$rowID = 1; 
+				      	 foreach($query->result() as $row) {
+				      		$sex ="";	
+				      		if($row -> Sex == "male"){
+				      			$sex = "ชาย";
+				      		}
+							else{
+								$sex = "หญิง";
+							}
+				      		?>
 				        <tr>
-				          <td>1</td>
-				          <td>Mark dsfdhjfh</td>
-				          <td style="width: 10px; text-align: center;">ชาย</td>
-				          <td style="width: 10px; text-align: center;">10</td>
-				          <td>the_mark7</td>
+				          <td><?= $rowID; ?></td>
+				          <td><?= $row -> F_Name . " " . $row -> L_Name; ?></td>
+				          <td style="width: 10px; text-align: center;"><?= $sex; ?></td>
+				          <td style="width: 10px; text-align: center;"><?= $row -> Old; ?></td>
+				          <td><?= substr($row -> Address, 0, 50); ?></td>
 				          <td>
-				              <a href="user.html"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+				              <a href="<?=site_url('user/edit/' . ($row -> Customer_ID)); ?>"><i class="icon-pencil"></i></a>
+				              <a href="<?=site_url('user/delete/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
 				          </td>
-				        </tr>
-				        <tr>
-				          <td>2</td>
-				          <td>Ashley</td>
-				          <td>Jacobs</td>
-				          <td>ash11927</td>
-				          <td>ash11927</td>
-				          <td>
-				              <a href="user.html"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-				          </td>
-				        </tr>
-				        <tr>
-				          <td>3</td>
-				          <td>Audrey</td>
-				          <td>Ann</td>
-				          <td>audann84</td>
-				          <td>ash11927</td>
-				          <td>
-				              <a href="user.html"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-				          </td>
-				        </tr>
-				        <tr>
-				          <td>4</td>
-				          <td>John</td>
-				          <td>Robinson</td>
-				          <td>jr5527</td>
-				          <td>ash11927</td>
-				          <td>
-				              <a href="user.html"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-				          </td>
-				        </tr>
-				        <tr>
-				          <td>5</td>
-				          <td>Aaron</td>
-				          <td>Butler</td>
-				          <td>ash11927</td>
-				          <td>aaron_butler</td>
-				          <td>
-				              <a href="user.html"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-				          </td>
-				        </tr>
-				        <tr>
-				          <td>6</td>
-				          <td>Chris</td>
-				          <td>Albert</td>
-				          <td>ash11927</td>
-				          <td>cab79</td>
-				          <td>
-				              <a href="user.html"><i class="icon-pencil"></i></a>
-				              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-				          </td>
-				        </tr>
+				        </tr>	
+				        <?php $rowID++;
+						  }  
+						  ?>
 				        <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						    <div class="modal-header">
 						        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
