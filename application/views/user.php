@@ -62,12 +62,14 @@
 				          <td style="width: 10px; text-align: center;"><?= $row -> Old; ?></td>
 				          <td><?= substr($row -> Address, 0, 50); ?></td>
 				          <td>
+				          	  <a href="<?=site_url('insurance/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal" class="btn btn-mini"><i class="icon-retweet"></i></a>
+				          	  &nbsp;&nbsp;
 				              <a href="<?=site_url('user/edit/' . ($row -> Customer_ID)); ?>"><i class="icon-pencil"></i></a>
 				              <a href="<?=site_url('user/delete/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
 				          </td>
 				        </tr>	
 				        <?php $rowID++;
-						  }  
+							}
 						  ?>
 				        <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						    <div class="modal-header">
