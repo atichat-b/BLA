@@ -22,10 +22,8 @@
 						<li>
 							<a href="#">Link</a>
 						</li>
-						<li>
-							<a href="#"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?></a>
-						</li>
 					</ul>
+					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout');?>">Logout</a></span>
 				</div>
 			</div>
 			<div class="well span11 form-horizontal" style="float:none;margin:0 auto">
