@@ -43,8 +43,8 @@
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 30px;">
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
 			<p class="page_title"></p>
-			<?php echo form_open_multipart('/register/insert', array('class' => 'well span11 form-horizontal', 'name' => 'frm_check')); ?>
-
+			<?php echo form_open_multipart('/user/edit_save', array('class' => 'well span11 form-horizontal', 'name' => 'frm_check')); ?>
+			<input type="hidden" id="ID" name="ID" value="<?=$query -> Customer_ID; ?>" />
 			<fieldset>
 				<!-- Genaral form -->
 				<h4>ข้อมูลทั่วไป</h4>
@@ -73,14 +73,14 @@
 				<div class="control-group">
 					<label class="control-label">วันเกิด</label>
 					<div class="controls">
-						<input id="birthday" name="birthday" placeholder="วัน/เดือน/ปี " type="text" onchange="Convertdate(this)">
+						<input id="birthday" name="birthday" placeholder="วัน/เดือน/ปี " type="text" onchange="Convertdate(this)" value="<?=$query -> BirthDay; ?>">
 					</div>
 				</div>
 				<!-- Old input-->
 				<div class="control-group">
 					<label class="control-label">อายุ</label>
 					<div class="controls">
-						<input id="old" name="old" type="text" placeholder="อายุ" class="input">
+						<input id="old" name="old" type="text" placeholder="อายุ" class="input" value="<?=$query -> Old; ?>">
 					</div>
 				</div>
 				<!-- Old input-->
@@ -109,7 +109,7 @@
 				<div class="control-group">
 					<label class="control-label">ที่อยู่</label>
 					<div class="controls">
-						<input id="address" name="address" type="text" placeholder="ที่อยู่" class="input">
+						<input id="address" name="address" type="text" placeholder="ที่อยู่" class="input" value="<?=$query -> Address; ?>">
 					</div>
 				</div>
 				<!-- city input-->
@@ -203,28 +203,28 @@
 				<div class="control-group">
 					<label class="control-label">รหัสไปรษณีย์</label>
 					<div class="controls">
-						<input id="postcode" name="postcode" type="text" placeholder="รหัสไปรษณีย์" class="input">
+						<input id="postcode" name="postcode" type="text" placeholder="รหัสไปรษณีย์" class="input" value="<?=$query -> Postcode; ?>">
 					</div>
 				</div>
 				<!-- email input -->
 				<div class="control-group">
 					<label class="control-label">อีเมล์</label>
 					<div class="controls">
-						<input id="email" name="email" type="text" placeholder="อีเมล์" class="input">
+						<input id="email" name="email" type="text" placeholder="อีเมล์" class="input"value="<?=$query -> Email; ?>">
 					</div>
 				</div>
 				<!-- telephone input -->
 				<div class="control-group">
 					<label class="control-label">เบอร์บ้าน</label>
 					<div class="controls">
-						<input id="telephone" name="telephone" type="text" placeholder="เบอร์บ้าน" class="input">
+						<input id="telephone" name="telephone" type="text" placeholder="เบอร์บ้าน" class="input" value="<?=$query -> Tel; ?>">
 					</div>
 				</div>
 				<!-- moblie input -->
 				<div class="control-group">
 					<label class="control-label">เบอร์มือถือ</label>
 					<div class="controls">
-						<input id="mobile" name="mobile" type="text" placeholder="เบอร์มือถือ" class="input">
+						<input id="mobile" name="mobile" type="text" placeholder="เบอร์มือถือ" class="input" value="<?=$query -> Mobile; ?>">
 					</div>
 				</div>
 
@@ -234,7 +234,7 @@
 				<div class="control-group">
 					<label class="control-label">รายได้ประจำ</label>
 					<div class="controls">
-						<input id="income_salary" name="income_salary" type="text" placeholder="รายได้ประจำ" class="input" onKeyup="Total()"  OnChange="JavaScript:chkNum(this)">
+						<input id="income_salary" name="income_salary" type="text" placeholder="รายได้ประจำ" class="input" onKeyup="Total()" value="<?=$query -> Income_money; ?>" OnChange="JavaScript:chkNum(this)">
 						ต่อเดือน
 					</div>
 				</div>
@@ -242,7 +242,7 @@
 				<div class="control-group">
 					<label class="control-label">รายได้อื่นๆ</label>
 					<div class="controls">
-						<input id="income_other" name="income_other" type="text" placeholder="รายได้อื่นๆ" class="input" onKeyup="Total()"  OnChange="JavaScript:chkNum(this)">
+						<input id="income_other" name="income_other" type="text" placeholder="รายได้อื่นๆ" class="input" onKeyup="Total()" value="<?=$query -> Income_other; ?>" OnChange="JavaScript:chkNum(this)">
 						ต่อเดือน
 					</div>
 				</div>
@@ -250,7 +250,7 @@
 				<div class="control-group">
 					<label class="control-label">รายได้รวม</label>
 					<div class="controls">
-						<input id="income_total" name="income_total" type="text" placeholder="รายได้รวม" class="input">
+						<input id="income_total" name="income_total" type="text" placeholder="รายได้รวม" class="input" value="<?=$query -> Income_total; ?>">
 						ต่อเดือน
 					</div>
 				</div>
@@ -261,7 +261,7 @@
 							ตกลง
 						</button>
 						&nbsp;
-						<button class="btn" type="reset" onclick="javascript:window.location.href='user'">
+						<button class="btn" type="reset" onclick="javascript:window.location.href='<?=base_url('user'); ?>'">
 							ยกเลิก
 						</button>
 					</div>

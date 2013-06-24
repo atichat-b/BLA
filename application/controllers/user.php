@@ -1,4 +1,5 @@
 <?php
+header('Content-type: text/html; charset=utf-8');
 if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 
@@ -34,6 +35,30 @@ class user extends CI_Controller {
 		$id = ($id == '') ? $this -> uri -> segment(3) : $id;
 		$data['query'] = $this -> user -> edit($id) -> row();
 		$this -> load -> view('enquiry_edit', $data);
+	}
+
+	function edit_save() {
+		$id = $this -> input -> post('ID');
+		$F_Name = $this -> input -> post('f_name');
+		$S_Name = $this -> input -> post('s_name');
+		$N_Name = $this -> input -> post('n_name');
+		$birthday = $this -> input -> post('birthday');
+		$old = $this -> input -> post('old');
+		$sex = $this -> input -> post('sex');
+		$status = $this -> input -> post('status');
+		$address = $this -> input -> post('address');
+		$country = $this -> input -> post('country');
+		$postcode = $this -> input -> post('postcode');
+		$email = $this -> input -> post('email');
+		$telephone = $this -> input -> post('telephone');
+		$mobile = $this -> input -> post('mobile');
+		$income_salary = $this -> input -> post('income_salary');
+		$income_other = $this -> input -> post('income_other');
+		$income_total = $this -> input -> post('income_total');
+		$params = array('F_Name' => $F_Name, 'L_Name' => $S_Name, 'N_Name' => $N_Name, 'BirthDay' => $birthday, 'Old' => $old, 'Sex' => $sex, 'Status' => $status, 'Address' => $address, 'Country' => $country, 'Postcode' => $postcode, 'Email' => $email, 'Tel' => $telephone, 'Mobile' => $mobile, 'Income_money' => $income_salary, 'Income_other' => $income_other, 'Income_total' => $income_total);
+		$this -> user -> edit_save($params, $id);
+		$alert = html_entity_decode("บันทึกข้อมูลเรียบร้อย");
+		echo "<script language='javascript'> alert('" . $alert . "');window.location='" . site_url('user') . "';</script>";
 	}
 
 	public function delete($id = '') {
