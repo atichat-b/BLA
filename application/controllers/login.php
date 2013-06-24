@@ -34,4 +34,9 @@ class login extends CI_Controller {
 		}
 	}
 
+	public function logout() {
+		echo "done";
+		redirect('/welcome', 'refresh');
+	}
+
 }
