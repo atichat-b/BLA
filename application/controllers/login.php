@@ -23,7 +23,8 @@ class login extends CI_Controller {
 				$result = $query -> result();
 				$user_data = array('Fname' => $result[0] -> f_name, 'Lname' => $result[0] -> l_name, 'logged' => TRUE);
 				$this -> session -> set_userdata($user_data);
-				$this -> load -> view('plan');
+				//$this -> load -> view('user');
+				redirect('/user', 'refresh');
 
 			} else {
 				$alert = html_entity_decode("กรุณารหัสตัวแทนเหรือพสาเวิร์ต");
