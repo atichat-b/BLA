@@ -10,9 +10,20 @@
 		<script src="<?=base_url(); ?>assets/js/jquery-ui-1.10.3.custom.js"></script>
 
 		<script>
-			$(function() {
-				$("#birthday").datepicker();
-			});
+			function chkSubmit() {
+				var other = document.getElementById('budget').value;
+				if (other > 100000) {
+					var check = other.substring(1, 2);
+					if (check != 0) {
+						var numplus = parseInt(other.substring(0, 1)) + parseInt(1);
+						var numzero = parseInt(other.substring(1, 10).length);
+						document.getElementById('budget').value = String(numplus) + "00000";
+					}
+				}
+				else{
+					document.getElementById('budget').value = "100000";
+				}
+			}
 		</script>
 	</head>
 	<body>
@@ -43,8 +54,9 @@
 							<div class="caption" class="pull-left">
 								<h4>ความคุ้มครองสูง</h4>
 								<small><b>ความคุ้มครองที่ต้องการ </b>
-								<input type="hidden" name="cusid" id="cusid"value="<?=$cusid; ?>" >
-								<input type="text" name="budget" id="budget" class="input-small" value="100000"/>บาท</small>
+									<input type="hidden" name="cusid" id="cusid"value="<?=$cusid; ?>" >
+									<input type="text" name="budget" id="budget" class="input-small" value="100000" onKeyup="chkSubmit()"/>
+									บาท</small>
 								<input type="submit" value="คำนวนเบี้ยประกัน" class="btn btn-primary icon pull-right">
 							</div>
 						</div>
@@ -57,8 +69,9 @@
 							<div class="caption" class="pull-left">
 								<h4>เงินออมทรัพย์ / เงินปั่นผล</h4>
 								<small><b>ความคุ้มครองที่ต้องการ </b>
-								<input type="hidden" name="cusid" id="cusid"value="<?=$cusid; ?>" >
-								<input type="text" name="budget" id="budget" value="5000" class="input-small" />บาท/ปี</small>
+									<input type="hidden" name="cusid" id="cusid"value="<?=$cusid; ?>" >
+									<input type="text" name="budget" id="budget" value="5000" class="input-small" />
+									บาท/ปี</small>
 								<input type="submit" value="คำนวนเบี้ยประกัน" class="btn btn-primary icon pull-right">
 							</div>
 						</div>
