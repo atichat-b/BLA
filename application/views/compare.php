@@ -3,15 +3,15 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>กรุงเทพประกันชีวิต</title>
-		<link rel="stylesheet" href="css/style.css" type="text/css">
-		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-		<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-		<script src="js/jquery-1.9.1.js"></script>
-		<script src="js/jquery-ui-1.10.3.custom.js"></script>
+		<link rel="stylesheet" href="<?=base_url();?>assets/css/style.css" type="text/css">
+		<link rel="stylesheet" href="<?=base_url();?>assets/css/bootstrap.css" type="text/css">
+		<link href="<?=base_url();?>assets/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+		<script src="<?=base_url();?>assets/js/jquery-1.9.1.js"></script>
+		<script src="<?=base_url();?>assets/js/jquery-ui-1.10.3.custom.js"></script>
 	</head>
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 200px;">
-			<img src="images/logo.png" class="logo"/>
+			<img src="<?=base_url();?>assets/images/logo.png" class="logo"/>
 			<p class="page_title"></p>
 			<h1 style="font-family: hel_45li; margin-left: 20px; color:#4c66a4;">ผลการคำนวณ</h1>
 			<br/>

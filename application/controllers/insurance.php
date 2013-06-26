@@ -28,14 +28,17 @@ class insurance extends CI_Controller {
 		$Budget = $this -> input -> post('budget');
 
 		$Capital = $Budget / 100000;
-		echo $Capital;
+		//echo $Capital;
+
+		$this -> load -> view('compare');
 	}
 
 	public function plan2() {
 		$CusID = $this -> input -> post('cusid');
 		$Budget = $this -> input -> post('budget');
-
-		echo $Budget . $CusID;
+		
+		//echo $Budget . $CusID;
+		$this -> load -> view('compare');
 	}
 
 	public function test() {
