@@ -14,14 +14,14 @@
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
 			<div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">Title</a>
+					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
 						<li class="active">
-							<a href="#">Home</a>
+							<a href="#">รายการล่าสุด</a>
 						</li>
 						<li>
-							<a href="#">Link</a>
-						</li>
+							<a href="http://localhost/bla/insurance/plan" >ความต้องการ</a>						
+					    </li>
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout');?>">Logout</a></span>
 				</div>

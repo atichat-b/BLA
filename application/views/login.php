@@ -13,14 +13,14 @@
 			</p>
 			<?php echo form_open('/login', array('id' => 'sign-up')); ?>
 			<p class="title">
-				Login
+				เข้าสู่ระบบ
 			</p>
 			<fieldset>
-				<label>UserName : </label>
+				<label>รหัสตัวแทน : </label>
 				<input type="text" id="username" name="username" />
 			</fieldset>
 			<fieldset>
-				<label>Password : </label>
+				<label>รหัสผ่าน : </label>
 				<input type="password" id="password" name="password" />
 			</fieldset>
 			<fieldset>

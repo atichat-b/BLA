@@ -32,18 +32,17 @@
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
 			<div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">Title</a>
+					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
+						<li>
+							<a href="http://localhost/bla/user"#">รายการล่าสุด</a>
+						</li>
 						<li class="active">
-							<a href="#">Home</a>
+							<a href="#">ความต้องการ</a>
 						</li>
-						<li>
-							<a href="#"><?= $cusid; ?></a>
-						</li>
-						<li>
-							<a href="#"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?></a>
-						</li>
+						
 					</ul>
+					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout');?>">Logout</a></span>
 				</div>
 			</div>
 			<div class="well span11 form-horizontal" style="float:none;margin:0 auto">
@@ -59,6 +58,8 @@
 									<input type="text" name="budget" id="budget" class="input-small" value="100000" />
 									บาท</small>
 								<input type="submit" value="คำนวนเบี้ยประกัน" class="btn btn-primary icon pull-right">
+								
+						
 							</div>
 						</div>
 					</li>
