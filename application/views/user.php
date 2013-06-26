@@ -34,9 +34,9 @@
 			  <div class="btn-toolbar">
 				    <a href="<?=base_url('register'); ?>"><button class="btn btn-primary">เพิ่มรายชื่อใหม่</button></a>
 					<div class="caption" class="pull-left">
-						<small><font>ค้นหา</font>
+						<small><b>ค้นหา</b>
 						<input name="budget" type="text" class="input-small" id="budget" value="" size="10">
-									บาท</small>
+						</small>
 								
 							
 			  </div>

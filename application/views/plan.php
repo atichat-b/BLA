@@ -30,12 +30,13 @@
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 500px;">
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
+			<p class="page_title"></p>
 			<div class="navbar">
 				<div class="navbar-inner">
 					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
 						<li>
-							<a href="http://localhost/bla/user"#">รายการล่าสุด</a>
+							<a href="http://localhost/bla/user"#">ข้อมูลลูกค้า</a>
 						</li>
 						<li class="active">
 							<a href="#">ความต้องการ</a>
