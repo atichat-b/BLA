@@ -12,12 +12,13 @@
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 500px;">
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
+			<p class="page_title"></p>
 			<div class="navbar">
 				<div class="navbar-inner">
 					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
 						<li class="active">
-							<a href="#">รายการล่าสุด</a>
+							<a href="#">ข้อมูลลูกค้า</a>
 						</li>
 						<li>
 							<a href="http://localhost/bla/insurance/plan" >ความต้องการ</a>						
@@ -25,11 +26,22 @@
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout');?>">Logout</a></span>
 				</div>
+				
+				
+				
 			</div>
 			<div class="well span11 form-horizontal" style="float:none;margin:0 auto">
-				<div class="btn-toolbar">
+			  <div class="btn-toolbar">
 				    <a href="<?=base_url('register'); ?>"><button class="btn btn-primary">เพิ่มรายชื่อใหม่</button></a>
-				</div>
+					<div class="caption" class="pull-left">
+						<small><font>ค้นหา</font>
+						<input name="budget" type="text" class="input-small" id="budget" value="" size="10">
+									บาท</small>
+								
+							
+			  </div>
+					</div>
+				
 				    <table class="table">
 				      <thead>
 				        <tr>
