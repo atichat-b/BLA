@@ -56,7 +56,7 @@
 								<h4>ความคุ้มครองสูง</h4>
 								<small><b>ความคุ้มครองที่ต้องการ </b>
 									<input type="hidden" name="cusid" id="cusid"value="<?=$cusid; ?>" >
-									<input type="text" name="budget" id="budget" class="input-small" value="100000" onKeyup="chkSubmit()"/>
+									<input type="text" name="budget" id="budget" class="input-small" value="100000" />
 									บาท</small>
 								<input type="submit" value="คำนวนเบี้ยประกัน" class="btn btn-primary icon pull-right">
 							</div>
@@ -69,7 +69,7 @@
 							<img src="http://placehold.it/320x200" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
 							<div class="caption" class="pull-left">
 								<h4>เงินออมทรัพย์ / เงินปั่นผล</h4>
-								<small><b>ความคุ้มครองที่ต้องการ </b>
+								<small><b>เบี้ยประกันที่ต้องการ </b>
 									<input type="hidden" name="cusid" id="cusid"value="<?=$cusid; ?>" >
 									<input type="text" name="budget" id="budget" value="5000" class="input-small" />
 									บาท/ปี</small>

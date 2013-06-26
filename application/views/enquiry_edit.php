@@ -73,7 +73,7 @@
 				<div class="control-group">
 					<label class="control-label">วันเกิด</label>
 					<div class="controls">
-						<input id="birthday" name="birthday" placeholder="วัน/เดือน/ปี " type="text" onchange="Convertdate(this)" value="<?=$query -> BirthDay; ?>">
+						<input id="birthday" name="birthday" placeholder="วัน/เดือน/ปี " type="text" onChange="Convertdate(this)" value="<?=$query -> BirthDay; ?>">
 					</div>
 				</div>
 				<!-- Old input-->
@@ -83,7 +83,7 @@
 						<input id="old" name="old" type="text" placeholder="อายุ" class="input" value="<?=$query -> Old; ?>">
 					</div>
 				</div>
-				<!-- Old input-->
+				<!-- Sex input-->
 				<div class="control-group">
 					<label class="control-label">เพศ</label>
 					<div class="controls">
@@ -261,7 +261,7 @@
 							ตกลง
 						</button>
 						&nbsp;
-						<button class="btn" type="reset" onclick="javascript:window.location.href='<?=base_url('user'); ?>'">
+						<button class="btn" type="reset" onClick="javascript:window.location.href='<?=base_url('user'); ?>'">
 							ยกเลิก
 						</button>
 					</div>
