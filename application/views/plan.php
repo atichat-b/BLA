@@ -19,9 +19,10 @@
 						var numzero = parseInt(other.substring(1, 10).length);
 						document.getElementById('budget').value = String(numplus) + "00000";
 					}
-				}
-				else{
-					document.getElementById('budget').value = "100000";
+				} else {
+					if (other.length < 6) {
+						document.getElementById('budget').value = "100000";
+					}
 				}
 			}
 		</script>
