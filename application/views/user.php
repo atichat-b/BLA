@@ -26,9 +26,7 @@
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout');?>">Logout</a></span>
 				</div>
-				
-				
-				
+
 			</div>
 			<div class="well span11 form-horizontal" style="float:none;margin:0 auto">
 			  <div class="btn-toolbar">
@@ -36,11 +34,9 @@
 					<div class="caption" class="pull-left">
 						<small><b>ค้นหา</b>
 						<input name="budget" type="text" class="input-small" id="budget" value="" size="10">
-						</small>
-								
-							
-			  </div>
-					</div>
+						</small>		
+			  		</div>
+				</div>
 				
 				    <table class="table">
 				      <thead>
@@ -75,12 +71,12 @@
 				          	  <a href="<?=site_url('insurance/plan/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal" class="btn btn-mini"><i class="icon-retweet"></i></a>
 				          	  &nbsp;&nbsp;
 				              <a href="<?=site_url('user/edit/' . ($row -> Customer_ID)); ?>"><i class="icon-pencil"></i></a>
-				              <a href="<?=site_url('user/delete/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+				              <a href="<?=site_url('user/delete/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal" onclick="return confirm('Are you sure you want to return to the home page ?')"><i class="icon-remove"></i></a>
 				          </td>
 				        </tr>	
 				        <?php $rowID++;
 							}
-						  ?>
+						  ?>						  
 				        <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						    <div class="modal-header">
 						        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
