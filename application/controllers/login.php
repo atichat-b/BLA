@@ -36,7 +36,7 @@ class login extends CI_Controller {
 	}
 
 	public function logout() {
-		echo "done";
+		$this -> session -> unset_userdata('logged');
 		redirect('/welcome', 'refresh');
 	}
 

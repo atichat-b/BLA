@@ -67,4 +67,10 @@ class user extends CI_Controller {
 		redirect('user');
 	}
 
+	public function search() {
+		$name = $this -> input -> post('search');
+		$this -> data['query'] = $this -> user -> search($name);
+		$this -> load -> view('user', $this -> data);
+	}
+
 }

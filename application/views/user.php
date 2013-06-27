@@ -12,7 +12,6 @@
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 500px;">
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
-			<p class="page_title"></p>
 			<div class="navbar">
 				<div class="navbar-inner">
 					<a class="brand" href="#">BLA</a>
@@ -20,24 +19,21 @@
 						<li class="active">
 							<a href="#">ข้อมูลลูกค้า</a>
 						</li>
-						<li>
-							<a href="http://localhost/bla/insurance/plan" >ความต้องการ</a>						
-					    </li>
 					</ul>
-					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout');?>">Logout</a></span>
+					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
 				</div>
 
 			</div>
 			<div class="well span11 form-horizontal" style="float:none;margin:0 auto">
 			  <div class="btn-toolbar">
 				    <a href="<?=base_url('register'); ?>"><button class="btn btn-primary">เพิ่มรายชื่อใหม่</button></a>
-					<div class="caption" class="pull-left">
-						<small><b>ค้นหา</b>
-						<input name="budget" type="text" class="input-small" id="budget" value="" size="10">
-						</small>		
-			  		</div>
+				    <?=form_open('user/search', array("class" => "form-search pull-right")); ?>
+					<div class="input-append">
+					    <input type="text" name="search" id="search" class="span2 search-query" placeholder="ชื่อลูกค้า">
+					    <button type="submit" class="btn">ค้นหา</button>
+				 	</div>
+				  	<?=form_close(); ?>
 				</div>
-				
 				    <table class="table">
 				      <thead>
 				        <tr>
@@ -71,7 +67,7 @@
 				          	  <a href="<?=site_url('insurance/plan/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal" class="btn btn-mini"><i class="icon-retweet"></i></a>
 				          	  &nbsp;&nbsp;
 				              <a href="<?=site_url('user/edit/' . ($row -> Customer_ID)); ?>"><i class="icon-pencil"></i></a>
-				              <a href="<?=site_url('user/delete/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal" onclick="return confirm('Are you sure you want to return to the home page ?')"><i class="icon-remove"></i></a>
+				              <a href="<?=site_url('user/delete/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal" onclick="return confirm('ยืนยันการลบข้อมูล')"><i class="icon-remove"></i></a>
 				          </td>
 				        </tr>	
 				        <?php $rowID++;

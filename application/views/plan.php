@@ -30,20 +30,15 @@
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 500px;">
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
-			<p class="page_title"></p>
 			<div class="navbar">
 				<div class="navbar-inner">
 					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
 						<li>
-							<a href="http://localhost/bla/user"#">ข้อมูลลูกค้า</a>
+							<a href="<?=base_url();?>user">ข้อมูลลูกค้า</a>
 						</li>
-						<li class="active">
-							<a href="#">ความต้องการ</a>
-						</li>
-						
 					</ul>
-					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout');?>">Logout</a></span>
+					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout');?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
 				</div>
 			</div>
 			<div class="well span11 form-horizontal" style="float:none;margin:0 auto">
@@ -56,11 +51,8 @@
 								<h4>ความคุ้มครองสูง</h4>
 								<small><b>ความคุ้มครองที่ต้องการ </b>
 									<input type="hidden" name="cusid" id="cusid"value="<?=$cusid; ?>" >
-									<input type="text" name="budget" id="budget" class="input-small" value="100000" />
-									บาท</small>
+									<input type="text" name="budget" id="budget" class="input-small" value="100000" />บาท</small>
 								<input type="submit" value="คำนวนเบี้ยประกัน" class="btn btn-primary icon pull-right">
-								
-						
 							</div>
 						</div>
 					</li>
@@ -73,8 +65,7 @@
 								<h4>เงินออมทรัพย์ / เงินปั่นผล</h4>
 								<small><b>เบี้ยประกันที่ต้องการ </b>
 									<input type="hidden" name="cusid" id="cusid"value="<?=$cusid; ?>" >
-									<input type="text" name="budget" id="budget" value="5000" class="input-small" />
-									บาท/ปี</small>
+									<input type="text" name="budget" id="budget" value="5000" class="input-small" />บาท/ปี</small>
 								<input type="submit" value="คำนวนเบี้ยประกัน" class="btn btn-primary icon pull-right">
 							</div>
 						</div>

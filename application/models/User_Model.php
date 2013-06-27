@@ -24,6 +24,10 @@ class User_Model extends CI_Model {
 		$this -> db -> where('Customer_ID', $id);
 		$this -> db -> delete('bla_customer');
 	}
-
+	
+	public function search($name){
+		$this -> db -> like('F_Name', "$name");
+		return $this -> db -> get('bla_customer');
+	}
 }
 ?>
