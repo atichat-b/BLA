@@ -37,6 +37,7 @@ class insurance extends CI_Controller {
 		$CusID = $this -> input -> post('cusid');
 		$Budget = $this -> input -> post('budget');
 		
+		$Hello ="";
 		//echo $Budget . $CusID;
 		$this -> load -> view('compare');
 	}
