@@ -21,7 +21,7 @@ class login extends CI_Controller {
 			$query = $this -> Login -> check_user($username, $password);
 			if ($query -> num_rows() > 0) {
 				$result = $query -> result();
-				$user_data = array('Fname' => $result[0] -> f_name, 'Lname' => $result[0] -> l_name, 'logged' => TRUE);
+				$user_data = array('id' => $result[0] -> id, 'Fname' => $result[0] -> f_name, 'Lname' => $result[0] -> l_name, 'logged' => TRUE);
 				$this -> session -> set_userdata($user_data);
 				//$this -> load -> view('user');
 				redirect('/user', 'refresh');

@@ -17,10 +17,10 @@
 					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
 						<li>
-							<a href="<?=base_url();?>/user">ข้อมูลลูกค้า</a>
+							<a href="<?=base_url(); ?>/user">ข้อมูลลูกค้า</a>
 						</li>
 					</ul>
-					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout');?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
+					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
 				</div>
 			</div>
 			<h1 style="font-family: hel_45li; margin-left: 20px; color:#4c66a4;">ผลการคำนวณ</h1>
@@ -39,38 +39,42 @@
 						<tbody>
 							<tr>
 								<td>แบบประกัน</td>
-								<td><?=$plan['Plan']; ?></td>
+								<td><?=$plan_a['Plan']; ?></td>
 								<td>ตลอดชีพ21</td>
 							</tr>
 							<tr>
-								<td>เบี้ยประกันต่อปี</td>
-								<td><?=number_format($plan['Total']); ?></td>
-								<td>50GB</td>
-							</tr>
-							<tr>
-								<td>รวมเบี้ยที่ต้องชำระ</td>
-								<td>-</td>
-								<td>2</td>
-							</tr>
-							<tr>
 								<td>ทุนความคุ้มครอง</td>
-								<td><?=number_format($plan['Budget']); ?></td>
+								<td><?=number_format($plan_a['Budget']); ?></td>
 								<td>1024MB</td>
 							</tr>
 							<tr>
-								<td>รวมเงินปันผล</td>
-								<td>-</td>
-								<td>400GB</td>
+								<td>เบี้ยประกันต่อปี</td>
+								<td><?=number_format($plan_a['Total']); ?></td>
+								<td>50GB</td>
+							</tr>
+							<tr>
+								<td>ชำระเบี้ยกี่ปี</td>
+								<td><?=$plan_a['Contract']; ?></td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>ชำระเบี้ยถึงอายุ</td>
+								<td><?=$plan_a['PayYear']; ?></td>
+								<td>2</td>
 							</tr>
 							<tr>
 								<td>เงินครบสัญญา</td>
-								<td>-</td>
+								<td><?=number_format($plan_a['Budget']); ?></td>
 								<td>400GB</td>
 							</tr>
-
 							<tr>
-								<td>ผลตอบแทนที่ได้รับ</td>
-								<td>-</td>
+								<td>คุ้มครองถึงอายุ</td>
+								<td><?=$plan_a['ProtectYear']; ?></td>
+								<td>$29.66/month</td>
+							</tr>
+							<tr>
+								<td>ปี่ที่สินสุดสัญญา</td>
+								<td><?=$plan_a['ProtectEnd']; ?></td>
 								<td>$29.66/month</td>
 							</tr>
 						</tbody>

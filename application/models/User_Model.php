@@ -6,9 +6,9 @@ class User_Model extends CI_Model {
 		parent::__construct();
 	}
 
-	public function get_user($start = '0', $limit = '20') {
-		$query = $this -> db -> get('bla_customer');
-		return $query;
+	public function get_user($session_id) {
+		$this -> db -> where('Invite', "$session_id");
+		return $this -> db -> get('bla_customer');
 	}
 
 	public function edit($id) {
@@ -24,10 +24,11 @@ class User_Model extends CI_Model {
 		$this -> db -> where('Customer_ID', $id);
 		$this -> db -> delete('bla_customer');
 	}
-	
-	public function search($name){
+
+	public function search($name) {
 		$this -> db -> like('F_Name', "$name");
 		return $this -> db -> get('bla_customer');
 	}
+
 }
 ?>

@@ -14,8 +14,9 @@ class user extends CI_Controller {
 
 	public function index() {
 		$session_logged = $this -> session -> userdata('logged');
+		$session_id = $this -> session -> userdata('id');
 		if ($session_logged == TRUE) {
-			$this -> data['query'] = $this -> user -> get_user();
+			$this -> data['query'] = $this -> user -> get_user($session_id);
 			$this -> load -> view('user', $this -> data);
 		} else {
 			$this -> load -> view('login');
