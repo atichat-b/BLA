@@ -35,10 +35,11 @@
 					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
 						<li>
-							<a href="<?=base_url();?>user">ข้อมูลลูกค้า</a>
+							<a href="<?=base_url(); ?>user">ข้อมูลลูกค้า</a>
 						</li>
 					</ul>
-					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout');?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
+					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?>
+						| <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
 				</div>
 			</div>
 			<div class="well span11 form-horizontal" style="float:none;margin:0 auto">
@@ -46,12 +47,13 @@
 					<?php echo form_open('insurance/plan1/', array("class" => "form-horizontal")); ?>
 					<li class="span10">
 						<div class="thumbnail clearfix">
-							<img src="http://placehold.it/320x200" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+							<img src="<?=site_url('assets/images/protect.png'); ?>" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
 							<div class="caption" class="pull-left">
 								<h4>ความคุ้มครองสูง</h4>
 								<small><b>ความคุ้มครองที่ต้องการ </b>
 									<input type="hidden" name="cusid" id="cusid"value="<?=$cusid; ?>" >
-									<input type="text" name="budget" id="budget" class="input-small" value="100000" />บาท</small>
+									<input type="text" name="budget" id="budget" class="input-small" value="100000" />
+									บาท</small>
 								<input type="submit" value="คำนวนเบี้ยประกัน" class="btn btn-primary icon pull-right">
 							</div>
 						</div>
@@ -60,12 +62,13 @@
 					<?php echo form_open('insurance/plan2/', array("class" => "form-horizontal")); ?>
 					<li class="span10" style="padding-top: 12px;">
 						<div class="thumbnail clearfix">
-							<img src="http://placehold.it/320x200" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+							<img src="<?=site_url('assets/images/saving.png'); ?>" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
 							<div class="caption" class="pull-left">
 								<h4>เงินออมทรัพย์ / เงินปั่นผล</h4>
 								<small><b>เบี้ยประกันที่ต้องการ </b>
 									<input type="hidden" name="cusid" id="cusid"value="<?=$cusid; ?>" >
-									<input type="text" name="budget" id="budget" value="5000" class="input-small" />บาท/ปี</small>
+									<input type="text" name="budget" id="budget" value="5000" class="input-small" />
+									บาท/ปี</small>
 								<input type="submit" value="คำนวนเบี้ยประกัน" class="btn btn-primary icon pull-right">
 							</div>
 						</div>
