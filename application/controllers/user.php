@@ -69,8 +69,9 @@ class user extends CI_Controller {
 	}
 
 	public function search() {
+		$session_id = $this -> session -> userdata('id');
 		$name = $this -> input -> post('search');
-		$this -> data['query'] = $this -> user -> search($name);
+		$this -> data['query'] = $this -> user -> search($name,$session_id);
 		$this -> load -> view('user', $this -> data);
 	}
 
