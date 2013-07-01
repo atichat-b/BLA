@@ -87,7 +87,7 @@
 				<div class="control-group">
 					<label class="control-label">เพศ</label>
 					<div class="controls">
-						<input type="radio" name="sex" value="male">
+						<input type="radio" name="sex" value="male" checked="true">
 						ชาย
 						<input type="radio" name="sex" value="female">
 						หญิง

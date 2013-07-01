@@ -87,9 +87,9 @@
 				<div class="control-group">
 					<label class="control-label">เพศ</label>
 					<div class="controls">
-						<input type="radio" name="sex" value="male">
+						<input type="radio" name="sex" value="male" <?= ($query -> Sex == 'male') ? 'checked == "true"' : '' ?>>
 						ชาย
-						<input type="radio" name="sex" value="female">
+						<input type="radio" name="sex" value="female" <?= ($query -> Sex == 'female') ? 'checked == "true"' : '' ?>>
 						หญิง
 					</div>
 				</div>
@@ -98,10 +98,10 @@
 					<label class="control-label">สภานภาพ</label>
 					<div class="controls">
 						<select id="status" name="status" class="input">
-							<option value="singel">โสด</option>
-							<option value="married">แต่งงาน</option>
-							<option value="divorce">หย่าร้าง</option>
-							<option value="other">อื่นๆ</option>
+							<option value="singel" <?= ($query -> Status == 'singel') ? 'selected="selected"' : '' ?>>โสด</option>
+							<option value="married" <?= ($query -> Status == 'married') ? 'selected="selected"' : '' ?>>แต่งงาน</option>
+							<option value="divorce" <?= ($query -> Status == 'divorce') ? 'selected="selected"' : '' ?>>หย่าร้าง</option>
+							<option value="other" <?= ($query -> Status == 'other') ? 'selected="selected"' : '' ?>>อื่นๆ</option>
 						</select>
 					</div>
 				</div>

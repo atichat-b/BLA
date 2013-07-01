@@ -16,6 +16,11 @@ class Insurance_Model extends CI_Model {
 		return $this -> db -> get('bla_insurance');
 	}
 
+	public function get_plan_b($Plan2_ID) {
+		$this -> db -> where('InsuranceID', "$Plan2_ID");
+		return $this -> db -> get('bla_insurance');
+	}
+
 	public function get_rates($sex, $old, $Plan) {
 		$this -> db -> where('Sex', $sex);
 		$this -> db -> where('Age', $old);

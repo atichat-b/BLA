@@ -40,42 +40,42 @@
 							<tr>
 								<td>แบบประกัน</td>
 								<td><?=$plan_a['Plan']; ?></td>
-								<td>ตลอดชีพ21</td>
+								<td><?=$plan_b['Plan']; ?></td>
 							</tr>
 							<tr>
 								<td>ทุนความคุ้มครอง</td>
 								<td><?=number_format($plan_a['Budget']); ?></td>
-								<td>1024MB</td>
+								<td><?=number_format($plan_b['Budget']); ?></td>
 							</tr>
 							<tr>
 								<td>เบี้ยประกันต่อปี</td>
 								<td><?=number_format($plan_a['Total']); ?></td>
-								<td>50GB</td>
+								<td><?=number_format($plan_b['Total']); ?></td>
 							</tr>
 							<tr>
 								<td>ชำระเบี้ยกี่ปี</td>
 								<td><?=$plan_a['Contract']; ?></td>
-								<td>2</td>
+								<td><?=$plan_b['Contract']; ?></td>
 							</tr>
 							<tr>
 								<td>ชำระเบี้ยถึงอายุ</td>
 								<td><?=$plan_a['PayYear']; ?></td>
-								<td>2</td>
+								<td><?=$plan_b['PayYear']; ?></td>
 							</tr>
 							<tr>
 								<td>เงินครบสัญญา</td>
 								<td><?=number_format($plan_a['Budget']); ?></td>
-								<td>400GB</td>
+								<td><?=number_format($plan_b['Budget']); ?></td>
 							</tr>
 							<tr>
 								<td>คุ้มครองถึงอายุ</td>
 								<td><?=$plan_a['ProtectYear']; ?></td>
-								<td>$29.66/month</td>
+								<td><?=$plan_b['ProtectYear']; ?></td>
 							</tr>
 							<tr>
 								<td>ปี่ที่สินสุดสัญญา</td>
 								<td><?=$plan_a['ProtectEnd']; ?></td>
-								<td>$29.66/month</td>
+								<td><?=$plan_b['ProtectEnd']; ?></td>
 							</tr>
 						</tbody>
 					</table>
