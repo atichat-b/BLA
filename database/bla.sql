@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2013 at 08:00 PM
+-- Generation Time: Jul 02, 2013 at 09:06 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -35,17 +35,17 @@ CREATE TABLE IF NOT EXISTS `bla_customer` (
   `Old` int(2) NOT NULL,
   `Sex` varchar(20) NOT NULL,
   `Status` varchar(20) NOT NULL,
-  `Address` varchar(255) NOT NULL,
+  `Address` varchar(150) NOT NULL,
   `Province` varchar(255) NOT NULL,
-  `Postcode` int(5) NOT NULL,
-  `Email` varchar(255) NOT NULL,
-  `Tel` int(10) NOT NULL,
-  `Mobile` int(10) NOT NULL,
+  `Postcode` varchar(5) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Tel` varchar(15) NOT NULL,
+  `Mobile` varchar(10) NOT NULL,
   `Income_money` float NOT NULL,
   `Income_other` float NOT NULL,
   `Income_total` float NOT NULL,
   `Date_Add` date NOT NULL,
-  `Invite` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   PRIMARY KEY (`Customer_ID`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='ข้อมูลลูกค้า' AUTO_INCREMENT=13 ;
 
@@ -53,16 +53,16 @@ CREATE TABLE IF NOT EXISTS `bla_customer` (
 -- Dumping data for table `bla_customer`
 --
 
-INSERT INTO `bla_customer` (`Customer_ID`, `F_Name`, `L_Name`, `N_Name`, `BirthDay`, `Old`, `Sex`, `Status`, `Address`, `Province`, `Postcode`, `Email`, `Tel`, `Mobile`, `Income_money`, `Income_other`, `Income_total`, `Date_Add`, `Invite`) VALUES
-(3, 'dsad', 'dsada', 'dsad', '0000-00-00', 18, 'female', 'singel', 'dsad', '', 84110, 'dd', 0, 0, 0, 0, 0, '0000-00-00', 2),
-(4, 'fdfd', 'dfdf', 'fdf', '2013-06-19', 0, '0', 'singel', 'fff', '', 0, 'f', 0, 0, 0, 0, 0, '0000-00-00', 2),
-(5, 'fdfd', 'dfdf', 'fdf', '2013-06-04', 0, 'male', 'singel', 'fff', 'AS', 0, 'f', 0, 0, 0, 0, 0, '0000-00-00', 2),
-(6, 'อติชาติ', 'แซ่แต้', 'แบงค์', '1989-11-04', 24, 'male', 'singel', '159 ลาดพร้าว ถ.ลาดพร้าว', '', 10900, 'bank_84@hotmail.com', 868853864, 868853864, 26700, 5000, 31700, '0000-00-00', 1),
-(7, 'อติชาติ', 'แซ่แต้', 'แบงค์', '1989-11-04', 24, 'male', 'singel', '159', 'กรุงเทพมหานคร', 10900, 'bank_84@hotmail.com', 868853864, 868853864, 26700, 5000, 31700, '0000-00-00', 1),
-(9, 'sdad', 'd', 'sdad', '2005-06-20', 8, 'female', 'other', 'sdad', '', 10900, 'ddddd', 2147483647, 2147483647, 5000, 5000, 10000, '0000-00-00', 1),
-(10, 'f', 'f', 'f', '2007-07-18', 6, 'male', 'singel', 'e', 'นครนายก', 11, '11', 1, 1, 11, 1, 12, '0000-00-00', 1),
-(11, 'f', 'f', 'f', '2007-07-18', 6, 'male', 'singel', 'e', 'นครนายก', 11, '11', 1, 1, 11, 1, 12, '0000-00-00', 1),
-(12, 'f', 'f', 'f', '2007-07-18', 6, 'male', 'singel', 'e', 'นครนายก', 11, '11', 1, 1, 11, 1, 12, '2013-07-02', 1);
+INSERT INTO `bla_customer` (`Customer_ID`, `F_Name`, `L_Name`, `N_Name`, `BirthDay`, `Old`, `Sex`, `Status`, `Address`, `Province`, `Postcode`, `Email`, `Tel`, `Mobile`, `Income_money`, `Income_other`, `Income_total`, `Date_Add`, `user_id`) VALUES
+(3, 'dsad', 'dsada', 'dsad', '0000-00-00', 18, 'female', 'singel', 'dsad', '', '84110', 'dd', '0', '0', 0, 0, 0, '0000-00-00', 2),
+(4, 'fdfd', 'dfdf', 'fdf', '2013-06-19', 0, '0', 'singel', 'fff', '', '0', 'f', '0', '0', 0, 0, 0, '0000-00-00', 2),
+(5, 'fdfd', 'dfdf', 'fdf', '2013-06-04', 0, 'male', 'singel', 'fff', 'AS', '0', 'f', '0', '0', 0, 0, 0, '0000-00-00', 2),
+(6, 'อติชาติ', 'แซ่แต้', 'แบงค์', '1989-11-04', 24, 'male', 'singel', '159 ลาดพร้าว ถ.ลาดพร้าว', '', '10900', 'bank_84@hotmail.com', '868853864', '868853864', 26700, 5000, 31700, '0000-00-00', 1),
+(7, 'อติชาติ', 'แซ่แต้', 'แบงค์', '1989-11-04', 24, 'male', 'singel', '159', 'กรุงเทพมหานคร', '10900', 'bank_84@hotmail.com', '868853864', '868853864', 26700, 5000, 31700, '0000-00-00', 1),
+(9, 'sdad', 'd', 'sdad', '2005-06-20', 8, 'female', 'other', 'sdad', '', '10900', 'ddddd', '2147483647', '2147483647', 5000, 5000, 10000, '0000-00-00', 1),
+(10, 'f', 'f', 'f', '2007-07-18', 6, 'male', 'singel', 'e', 'นครนายก', '11', '11', '1', '1', 11, 1, 12, '0000-00-00', 1),
+(11, 'f', 'f', 'f', '2007-07-18', 6, 'male', 'singel', 'e', 'นครนายก', '11', '11', '1', '1', 11, 1, 12, '0000-00-00', 1),
+(12, 'f', 'f', 'f', '2007-07-18', 6, 'male', 'singel', 'e', 'นครนายก', '11', '11', '1', '1', 11, 1, 12, '2013-07-02', 1);
 
 -- --------------------------------------------------------
 
@@ -71,7 +71,7 @@ INSERT INTO `bla_customer` (`Customer_ID`, `F_Name`, `L_Name`, `N_Name`, `BirthD
 --
 
 CREATE TABLE IF NOT EXISTS `bla_insurance` (
-  `InsuranceID` int(11) NOT NULL,
+  `InsuranceID` int(11) NOT NULL AUTO_INCREMENT,
   `NameInsurance` varchar(255) CHARACTER SET utf8 NOT NULL,
   `CatagoryInsurance` varchar(255) CHARACTER SET utf8 NOT NULL,
   `YearPaid` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -79,18 +79,18 @@ CREATE TABLE IF NOT EXISTS `bla_insurance` (
   `YearForDividend` int(11) NOT NULL,
   `AmountDividend` int(11) NOT NULL,
   PRIMARY KEY (`InsuranceID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='ข้อมูลแบบประกัน';
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='ข้อมูลแบบประกัน' AUTO_INCREMENT=10005 ;
 
 --
 -- Dumping data for table `bla_insurance`
 --
 
 INSERT INTO `bla_insurance` (`InsuranceID`, `NameInsurance`, `CatagoryInsurance`, `YearPaid`, `YearForContract`, `YearForDividend`, `AmountDividend`) VALUES
-(10000, 'ดั่งใจ 25/20', 'ออมทรัพย์', '20', 25, 0, 0),
-(10001, 'ดั่งใจ 25/20 ตลอดชีพ', 'ออมทรัพย์', '21', 99, 0, 0),
-(10002, 'ห่วงรัก ชำระเบี้ย 20 ปี', 'คุ้มครอง', '20', 90, 0, 0),
-(10003, 'ห่วงรัก ชำระเบี้ย 21 ปี', 'คุ้มครอง', '21', 90, 0, 0),
-(10004, 'ห่วงรัก 90/20', 'คุ้มครอง', '20', 90, 0, 0);
+(10000, 'ดั่งใจ 25/20', '1', '20', 25, 0, 0),
+(10001, 'ดั่งใจ 25/20 ตลอดชีพ', '1', '21', 99, 0, 0),
+(10002, 'ห่วงรัก ชำระเบี้ย 20 ปี', '2', '20', 90, 0, 0),
+(10003, 'ห่วงรัก ชำระเบี้ย 21 ปี', '2', '21', 90, 0, 0),
+(10004, 'ห่วงรัก 90/20', '2', '20', 90, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -827,13 +827,13 @@ CREATE TABLE IF NOT EXISTS `bla_report` (
 --
 
 CREATE TABLE IF NOT EXISTS `bla_users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `f_name` varchar(100) CHARACTER SET utf8 NOT NULL,
   `l_name` varchar(100) CHARACTER SET utf8 NOT NULL,
   `username` varchar(100) CHARACTER SET utf8 NOT NULL,
   `password` varchar(50) CHARACTER SET utf8 NOT NULL,
   `role` int(2) NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`user_id`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='ข้อมูลตัวแทน' AUTO_INCREMENT=3 ;
 
@@ -841,7 +841,7 @@ CREATE TABLE IF NOT EXISTS `bla_users` (
 -- Dumping data for table `bla_users`
 --
 
-INSERT INTO `bla_users` (`id`, `f_name`, `l_name`, `username`, `password`, `role`) VALUES
+INSERT INTO `bla_users` (`user_id`, `f_name`, `l_name`, `username`, `password`, `role`) VALUES
 (1, 'Admin', 'admin', 'admin', '1234', 1),
 (2, '', '', 'aaaa', 'aaaa', 2);
 
