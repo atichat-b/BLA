@@ -54,7 +54,7 @@ class insurance extends CI_Controller {
 			$Insurance = $rates_result[0] -> Type;
 			$total = $Budget / 100000 * $Rate;
 			$PayYear = $Paid + $old;
-			$ProtectYear = $Contract + $old;
+			$ProtectYear = $Contract;
 			$ProtectEnd = date("Y") + $Contract;
 
 			/*------Plan B------*/
@@ -67,7 +67,7 @@ class insurance extends CI_Controller {
 			$Plan2_Rate = $rates_result[1] -> Rate;
 			$Plan2_Total = $Budget / 100000 * $Plan2_Rate;
 			$Plan2_PayYear = $Plan2_Paid + $old;
-			$Plan2_Protect_Year = $Plan2_Contract + $old;
+			$Plan2_Protect_Year = $Plan2_Contract;
 			$Plan2_Protect_End = date("Y") + $Plan2_Contract;
 
 			$data['plan_a'] = array('Plan' => $Insurance, 'Budget' => $Budget, 'Total' => $total, 'Contract' => $Paid, 'PayYear' => $PayYear, 'ProtectYear' => $ProtectYear, 'ProtectEnd' => $ProtectEnd);
@@ -106,7 +106,7 @@ class insurance extends CI_Controller {
 			$Insurance = $rates_result[0] -> Type;
 			$total = $Budget / 5000 * $Rate;
 			$PayYear = $Paid + $old;
-			$ProtectYear = $Contract + $old;
+			$ProtectYear = $Contractz;
 			$ProtectEnd = date("Y") + $Contract;
 
 			/*------Plan B------*/
@@ -119,7 +119,7 @@ class insurance extends CI_Controller {
 			$Plan2_Rate = $rates_result[1] -> Rate;
 			$Plan2_Total = $Budget / 5000 * $Plan2_Rate;
 			$Plan2_PayYear = $Plan2_Paid + $old;
-			$Plan2_Protect_Year = $Plan2_Contract + $old;
+			$Plan2_Protect_Year = $Plan2_Contract;
 			$Plan2_Protect_End = date("Y") + $Plan2_Contract;
 
 			$data['plan_a'] = array('Plan' => $Insurance, 'Budget' => $Budget, 'Total' => $total, 'Contract' => $Paid, 'PayYear' => $PayYear, 'ProtectYear' => $ProtectYear, 'ProtectEnd' => $ProtectEnd);
