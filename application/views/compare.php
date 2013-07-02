@@ -11,21 +11,38 @@
 	</head>
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 200px;">
-			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>			
+		
+                        <img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
+                        <p class="page_title">
+			</p>
 			<div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">BLA</a>
+					<a class="brand" href="#">BLA : ขั้นตอน</a>
 					<ul class="nav">
 						<li>
+<<<<<<< HEAD
 							<a href="<?=base_url(); ?>user">ข้อมูลลูกค้า</a>
 						</li>
 						<li>
 							<a href="<?=base_url(); ?>report">รายงาน</a>
+=======
+							<a href="<?=base_url(); ?>/user">1.ข้อมูลลูกค้า</a>
+						</li>
+                                                <li>
+							<a href="<?=base_url(); ?>insurance/plan/6">2.ความต้องการ</a>
+						</li>
+                                                <li class="active">
+							<a href="#">3.รายงาน</a>
+>>>>>>> 3545b523d2227e66be4bcf0f2001f1fade20d527
 						</li>
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
 				</div>
+                            <div class="well span11 form-horizontal" style="float:none;margin:0 auto">
+                           
 			</div>
+                         <ul class="thumbnails" style="margin: 20px;">
+                             
 			<h1 style="font-family: hel_45li; margin-left: 20px; color:#4c66a4;">ผลการคำนวณ</h1>
 			<br/>
 			<div class="row">
@@ -42,48 +59,50 @@
 						<tbody>
 							<tr>
 								<td>แบบประกัน</td>
-								<td><?=$plan_a['Plan']; ?></td>
-								<td><?=$plan_b['Plan']; ?></td>
+								<td><h4 style="color:#006000;"><?=$plan_a['Plan']; ?></h4></td>
+								<td><h4 style="color:#006000;"><?=$plan_b['Plan']; ?></h4></td>
 							</tr>
 							<tr>
 								<td>ทุนความคุ้มครอง</td>
-								<td><?=number_format($plan_a['Budget']); ?></td>
-								<td><?=number_format($plan_b['Budget']); ?></td>
+								<td><h4 style="color:#dc143c;"><?=number_format($plan_a['Budget']); ?></h4></td>
+								<td><h4 style="color:#dc143c;"><?=number_format($plan_b['Budget']); ?></h4></td>
 							</tr>
 							<tr>
 								<td>เบี้ยประกันต่อปี</td>
-								<td><?=number_format($plan_a['Total']); ?></td>
-								<td><?=number_format($plan_b['Total']); ?></td>
+                                                                <td><h4 style="color:#dc143c;"><?=number_format($plan_a['Total']) ; ?></h4></td>
+								<td><h4 style="color:#dc143c;"><?=number_format($plan_b['Total']); ?></h4></td>
 							</tr>
 							<tr>
 								<td>ชำระเบี้ยกี่ปี</td>
-								<td><?=$plan_a['Contract']; ?></td>
-								<td><?=$plan_b['Contract']; ?></td>
+								<td><h4 style="color:#006000;"><?=$plan_a['Contract']; ?></h4></td>
+								<td><h4 style="color:#006000;"><?=$plan_b['Contract']; ?></h4></td>
 							</tr>
 							<tr>
 								<td>ชำระเบี้ยถึงอายุ</td>
-								<td><?=$plan_a['PayYear']; ?></td>
-								<td><?=$plan_b['PayYear']; ?></td>
+								<td><h4 style="color:#006000;"><?=$plan_a['PayYear']; ?></h4></td>
+								<td><h4 style="color:#006000;"><?=$plan_b['PayYear']; ?></h4></td>
 							</tr>
 							<tr>
 								<td>เงินครบสัญญา</td>
-								<td><?=number_format($plan_a['Budget']); ?></td>
-								<td><?=number_format($plan_b['Budget']); ?></td>
+								<td><h4 style="color:#006000;"><?=number_format($plan_a['Budget']); ?></h4></td>
+								<td><h4 style="color:#006000;"><?=number_format($plan_b['Budget']); ?></h4></td>
 							</tr>
 							<tr>
 								<td>คุ้มครองถึงอายุ</td>
-								<td><?=$plan_a['ProtectYear']; ?></td>
-								<td><?=$plan_b['ProtectYear']; ?></td>
+								<td><h4 style="color:#006000;"><?=$plan_a['ProtectYear']; ?></h4></td>
+								<td><h4 style="color:#006000;"><?=$plan_b['ProtectYear']; ?></h4></td>
 							</tr>
 							<tr>
 								<td>ปี่ที่สินสุดสัญญา</td>
-								<td><?=$plan_a['ProtectEnd']; ?></td>
-								<td><?=$plan_b['ProtectEnd']; ?></td>
+								<td><h4 style="color:#006000;"><?=$plan_a['ProtectEnd']; ?></h4></td>
+								<td><h4 style="color:#006000;"><?=$plan_b['ProtectEnd']; ?></h4></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
+                      
+                     </ul>
 		</div>
 	</body>
 </html>

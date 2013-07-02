@@ -10,14 +10,23 @@
 		<script src="<?=base_url(); ?>assets/js/jquery-ui-1.10.3.custom.js"></script>
 	</head>
 	<body>
+            
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 500px;">
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
-			<div class="navbar">
+			<p class="page_title">
+			</p>
+                        <div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">BLA</a>
+					<a class="brand" href="#">BLA : ขั้นตอน</a>
 					<ul class="nav">
 						<li class="active">
-							<a href="#">ข้อมูลลูกค้า</a>
+							<a href="#">1.ข้อมูลลูกค้า</a>
+						</li>
+                                                <li>
+							<a href="#">2.ความต้องการ</a>
+						</li>
+                                                <li>
+							<a href="#">3.รายงาน</a>
 						</li>
 						<li class="">
 							<a href="report">รายงาน</a>
