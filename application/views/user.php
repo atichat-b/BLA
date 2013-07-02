@@ -10,9 +10,12 @@
 		<script src="<?=base_url(); ?>assets/js/jquery-ui-1.10.3.custom.js"></script>
 	</head>
 	<body>
+            
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 500px;">
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
-			<div class="navbar">
+			<p class="page_title">
+			</p>
+                        <div class="navbar">
 				<div class="navbar-inner">
 					<a class="brand" href="#">BLA</a>
 					<ul class="nav">

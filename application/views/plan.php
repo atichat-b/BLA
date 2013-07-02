@@ -30,6 +30,8 @@
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 500px;">
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
+                        <p class="page_title">
+			</p>
 			<div class="navbar">
 				<div class="navbar-inner">
 					<a class="brand" href="#">BLA</a>
@@ -64,7 +66,7 @@
 						<div class="thumbnail clearfix">
 							<img src="<?=site_url('assets/images/saving.png'); ?>" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
 							<div class="caption" class="pull-left">
-								<h4>เงินออมทรัพย์ / เงินปั่นผล</h4>
+								<h4>เงินออมทรัพย์ / เงินปันผล</h4>
 								<small><b>เบี้ยประกันที่ต้องการ </b>
 									<input type="hidden" name="cusid" id="cusid"value="<?=$cusid; ?>" >
 									<input type="text" name="budget" id="budget" value="5000" class="input-small" />
