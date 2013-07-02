@@ -50,7 +50,7 @@
 				<h4>ข้อมูลทั่วไป</h4>
 				<!-- first-name input-->
 				<div class="control-group">
-					<label class="control-label">ชื่อ</label>
+					<label class="control-label">ชื่อ*</label>
 					<div class="controls">
 						<input id="first-name" name="f_name" type="text" placeholder="ชื่อ" class="input">
 					</div>
@@ -71,21 +71,21 @@
 				</div>
 				<!-- Birthday input-->
 				<div class="control-group">
-					<label class="control-label">วันเกิด</label>
+					<label class="control-label">วันเกิด*</label>
 					<div class="controls">
 						<input id="birthday" name="birthday" placeholder="วัน/เดือน/ปี " type="text" onChange="Convertdate(this)">
 					</div>
 				</div>
 				<!-- Old input-->
 				<div class="control-group">
-					<label class="control-label">อายุ</label>
+					<label class="control-label">อายุ*</label>
 					<div class="controls">
 						<input id="old" name="old" type="text" placeholder="อายุ" class="input">
 					</div>
 				</div>
 				<!-- Sex input-->
 				<div class="control-group">
-					<label class="control-label">เพศ</label>
+					<label class="control-label">เพศ*</label>
 					<div class="controls">
 						<input type="radio" name="sex" value="male" checked="true">
 						ชาย
@@ -95,7 +95,7 @@
 				</div>
 				<!-- status selected-->
 				<div class="control-group">
-					<label class="control-label">สภานภาพ</label>
+					<label class="control-label">สภานภาพ*</label>
 					<div class="controls">
 						<select id="status" name="status" class="input">
 							<option value="singel">โสด</option>
@@ -114,7 +114,7 @@
 				</div>
 				<!-- city input-->
 				<div class="control-group">
-					<label class="control-label">จังหวัด</label>
+					<label class="control-label">จังหวัด*</label>
 					<div class="controls">
 						<select id="country" name="country" class="input">
 							<option value="" selected="selected">กรุณาเลือกจังหวัด</option>
@@ -222,9 +222,10 @@
 				</div>
 				<!-- moblie input -->
 				<div class="control-group">
-					<label class="control-label">เบอร์มือถือ</label>
+					<label class="control-label">เบอร์มือถือ*</label>
 					<div class="controls">
 						<input id="mobile" name="mobile" type="text" placeholder="เบอร์มือถือ" class="input">
+                                                 ถ้าไม่มีให้กรอก "00"
 					</div>
 				</div>
 
@@ -232,7 +233,7 @@
 				<h4>ข้อมูลรายได้</h4>
 				<!-- moblie input -->
 				<div class="control-group">
-					<label class="control-label">รายได้ประจำ</label>
+					<label class="control-label">รายได้ประจำ*</label>
 					<div class="controls">
 						<input id="income_salary" name="income_salary" type="text" placeholder="รายได้ประจำ" class="input" onKeyup="Total()"  OnChange="JavaScript:chkNum(this)">
 						ต่อเดือน
@@ -248,7 +249,7 @@
 				</div>
 				<!-- moblie input -->
 				<div class="control-group">
-					<label class="control-label">รายได้รวม</label>
+					<label class="control-label">รายได้รวม*</label>
 					<div class="controls">
 						<input id="income_total" name="income_total" type="text" placeholder="รายได้รวม" class="input">
 						ต่อเดือน
