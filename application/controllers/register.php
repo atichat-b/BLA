@@ -38,7 +38,7 @@ class register extends CI_Controller {
 		$income_total = $this -> input -> post('income_total');
 		$invite = $this -> session -> userdata('id');
 		$data_add = date('Y-m-d');
-		$param = array('F_Name' => $F_Name, 'L_Name' => $S_Name, 'N_Name' => $N_Name, 'BirthDay' => $birthday, 'Old' => $old, 'Sex' => $sex, 'Status' => $status, 'Address' => $address, 'Province' => $country, 'Postcode' => $postcode, 'Email' => $email, 'Tel' => $telephone, 'Mobile' => $mobile, 'Income_money' => $income_salary, 'Income_other' => $income_other, 'Income_total' => $income_total, 'Date_Add' => $data_add, 'Invite' => $invite);
+		$param = array('F_Name' => $F_Name, 'L_Name' => $S_Name, 'N_Name' => $N_Name, 'BirthDay' => $birthday, 'Old' => $old, 'Sex' => $sex, 'Status' => $status, 'Address' => $address, 'Province' => $country, 'Postcode' => $postcode, 'Email' => $email, 'Tel' => $telephone, 'Mobile' => $mobile, 'Income_money' => $income_salary, 'Income_other' => $income_other, 'Income_total' => $income_total, 'Date_Add' => $data_add, 'user_id' => $invite);
 		//echo "<pre>" . json_encode($param);
 		$this -> register -> insert_db($param);
 		$alert = html_entity_decode("บันทึกข้อมูลเรียบร้อย");

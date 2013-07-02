@@ -7,7 +7,7 @@ class User_Model extends CI_Model {
 	}
 
 	public function get_user($session_id) {
-		$this -> db -> where('Invite', "$session_id");
+		$this -> db -> where('user_id', "$session_id");
 		return $this -> db -> get('bla_customer');
 	}
 
@@ -26,7 +26,7 @@ class User_Model extends CI_Model {
 	}
 
 	public function search($name,$session_id) {
-		$this -> db -> where('Invite', "$session_id");
+		$this -> db -> where('user_id', "$session_id");
 		$this -> db -> like('F_Name', "$name");
 		return $this -> db -> get('bla_customer');
 	}
