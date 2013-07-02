@@ -34,10 +34,16 @@
 			</p>
 			<div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">BLA</a>
+					<a class="brand" href="#">BLA : ขั้นตอน</a>
 					<ul class="nav">
 						<li>
-							<a href="<?=base_url(); ?>user">ข้อมูลลูกค้า</a>
+							<a href="<?=base_url(); ?>user">1.ข้อมูลลูกค้า</a>
+						</li>
+                                                <li class="active">
+							<a href="#">2.ความต้องการ</a>
+						</li>
+                                                 <li>
+							<a href="#">3.รายงาน</a>
 						</li>
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?>
