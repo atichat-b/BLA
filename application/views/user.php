@@ -15,26 +15,25 @@
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
 			<p class="page_title">
 			</p>
-                        <div class="navbar">
+              <div class="navbar">
 				<div class="navbar-inner">
 					<a class="brand" href="#">BLA : ขั้นตอน</a>
 					<ul class="nav">
 						<li class="active">
 							<a href="#">1.ข้อมูลลูกค้า</a>
 						</li>
-                                                <li>
+                        <li>
 							<a href="#">2.ความต้องการ</a>
 						</li>
-                                                <li>
+                        <li>
 							<a href="#">3.รายงาน</a>
 						</li>
-						<li class="">
-							<a href="report">รายงาน</a>
+						<li>
+							<a href="report"><b>สรุปผลประจำเดิอน</b></a>
 						</li>
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
 				</div>
-
 			</div>
 			<div class="well span11 form-horizontal" style="float:none;margin:0 auto">
 			  <div class="btn-toolbar">

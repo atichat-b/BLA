@@ -30,8 +30,7 @@
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 500px;">
 			<img src="<?=base_url(); ?>assets/images/logo.png" class="logo"/>
-                        <p class="page_title">
-			</p>
+			<p class="page_title"></p>
 			<div class="navbar">
 				<div class="navbar-inner">
 					<a class="brand" href="#">BLA : ขั้นตอน</a>
@@ -39,14 +38,11 @@
 						<li>
 							<a href="<?=base_url(); ?>user">1.ข้อมูลลูกค้า</a>
 						</li>
-                                                <li class="active">
+						<li class="active">
 							<a href="#">2.ความต้องการ</a>
 						</li>
-                                                 <li>
-							<a href="#">3.รายงาน</a>
-						</li>
 						<li>
-							<a href="<?=base_url(); ?>report">รายงาน</a>
+							<a href="#">3.รายงาน</a>
 						</li>
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?>
