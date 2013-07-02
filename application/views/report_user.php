@@ -27,7 +27,7 @@
 					<a class="brand" href="#">BLA : ขั้นตอน</a>
 					<ul class="nav">
 						<li>
-							<a href="user">1.ข้อมูลลูกค้า</a>
+							<a href="<?=base_url(); ?>user">1.ข้อมูลลูกค้า</a>
 						</li>
                         <li>
 							<a href="#">2.ความต้องการ</a>
@@ -36,7 +36,7 @@
 							<a href="report">3.รายงาน</a>
 						</li>
 						<li class="active">
-							<a href="report"><b>สรุปผลประจำเดิอน</b></a>
+							<a href="<?=base_url(); ?>report"><b>สรุปผลประจำเดิอน</b></a>
 						</li>
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
