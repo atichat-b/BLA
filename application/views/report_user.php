@@ -8,6 +8,14 @@
 		<link href="<?=base_url(); ?>assets/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 		<script src="<?=base_url(); ?>assets/js/jquery-1.9.1.js"></script>
 		<script src="<?=base_url(); ?>assets/js/jquery-ui-1.10.3.custom.js"></script>
+		<script>
+			$(function() {
+				$("#datepicker").datepicker({
+					maxDate : 0,
+					dateFormat : 'yy-mm-dd'
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div class="container" style="box-shadow: 1px 1px 15px 1px rgba(50, 50, 50,.5); padding-bottom: 500px;">
@@ -16,23 +24,21 @@
 				<div class="navbar-inner">
 					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
-						<li class="active">
-							<a href="#">ข้อมูลลูกค้า</a>
-						</li>
 						<li class="">
+							<a href="user">ข้อมูลลูกค้า</a>
+						</li>
+						<li class="active">
 							<a href="report">รายงาน</a>
 						</li>
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
 				</div>
-
 			</div>
 			<div class="well span11 form-horizontal" style="float:none;margin:0 auto">
 			  <div class="btn-toolbar">
-				    <a href="<?=base_url('register'); ?>"><button class="btn btn-primary">เพิ่มรายชื่อใหม่</button></a>
-				    <?=form_open('user/search', array("class" => "form-search pull-right")); ?>
+				    <?=form_open('report/get_date', array("class" => "form-search pull-right")); ?>
 					<div class="input-append">
-					    <input type="text" name="search" id="search" class="span2 search-query" placeholder="ชื่อลูกค้า">
+					    <input type="text" name="datepicker" id="datepicker" class="span2 search-query">
 					    <button type="submit" class="btn">ค้นหา</button>
 				 	</div>
 				  	<?=form_close(); ?>
@@ -65,7 +71,7 @@
 				          <td><?= $row -> F_Name . " " . $row -> L_Name; ?></td>
 				          <td style="width: 10px; text-align: center;"><?= $sex; ?></td>
 				          <td style="width: 10px; text-align: center;"><?= $row -> Old; ?></td>
-				          <td><?= substr($row -> Address, 0, 60) . '...'; ?></td>
+				          <td><?= substr($row -> Address, 0, 50); ?></td>
 				          <td>
 				          	  <a href="<?=site_url('insurance/plan/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal" class="btn btn-mini"><i class="icon-retweet"></i></a>
 				          	  &nbsp;&nbsp;

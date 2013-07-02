@@ -56,7 +56,7 @@ class user extends CI_Controller {
 		$income_salary = $this -> input -> post('income_salary');
 		$income_other = $this -> input -> post('income_other');
 		$income_total = $this -> input -> post('income_total');
-		$params = array('F_Name' => $F_Name, 'L_Name' => $S_Name, 'N_Name' => $N_Name, 'BirthDay' => $birthday, 'Old' => $old, 'Sex' => $sex, 'Status' => $status, 'Address' => $address, 'Country' => $country, 'Postcode' => $postcode, 'Email' => $email, 'Tel' => $telephone, 'Mobile' => $mobile, 'Income_money' => $income_salary, 'Income_other' => $income_other, 'Income_total' => $income_total);
+		$params = array('F_Name' => $F_Name, 'L_Name' => $S_Name, 'N_Name' => $N_Name, 'BirthDay' => $birthday, 'Old' => $old, 'Sex' => $sex, 'Status' => $status, 'Address' => $address, 'Province' => $country, 'Postcode' => $postcode, 'Email' => $email, 'Tel' => $telephone, 'Mobile' => $mobile, 'Income_money' => $income_salary, 'Income_other' => $income_other, 'Income_total' => $income_total);
 		$this -> user -> edit_save($params, $id);
 		$alert = html_entity_decode("บันทึกข้อมูลเรียบร้อย");
 		echo "<script language='javascript'> alert('" . $alert . "');window.location='" . site_url('user') . "';</script>";

@@ -17,7 +17,10 @@
 					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
 						<li>
-							<a href="<?=base_url(); ?>/user">ข้อมูลลูกค้า</a>
+							<a href="<?=base_url(); ?>user">ข้อมูลลูกค้า</a>
+						</li>
+						<li>
+							<a href="<?=base_url(); ?>report">รายงาน</a>
 						</li>
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
