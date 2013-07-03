@@ -64,7 +64,7 @@
 				      </thead>
 				      <tbody>
 				      	<?php 
-				      	$rowID = 1; 
+						$rowID = 1; 
 				      	 foreach($query->result() as $row) {
 				      		$sex ="";	
 				      		if($row -> Sex == "male"){
@@ -74,8 +74,9 @@
 								$sex = "หญิง";
 							}
 				      		?>
+				      		
 				        <tr>
-				          <td><?= $rowID; ?></td>
+				          <td><?=$rowID; ?></td>
 				          <td><?= $row -> F_Name . " " . $row -> L_Name; ?></td>
 				          <td style="width: 10px; text-align: center;"><?= $sex; ?></td>
 				          <td style="width: 10px; text-align: center;"><?= $row -> Old; ?></td>
