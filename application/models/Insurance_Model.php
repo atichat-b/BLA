@@ -25,6 +25,8 @@ class Insurance_Model extends CI_Model {
 		$this -> db -> where('Sex', $sex);
 		$this -> db -> where('Age', $old);
 		$this -> db -> where('CatagoryInsurance', "$Plan");
+		$this -> db -> order_by('id', 'RANDOM');
+		$this -> db -> limit(2);
 		return $this -> db -> get('bla_rate');
 	}
 

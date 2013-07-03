@@ -25,13 +25,13 @@ class report extends CI_Controller {
 		$session_id = $this -> session -> userdata('id');
 		$date = $this -> input -> post('datepicker');
 		$this -> data['query'] = $this -> report -> get_user_date($date, $session_id);
-		
+
 		$this -> load -> view('report_user', $this -> data);
 	}
 
-	public function logout() {
-		$this -> session -> unset_userdata('logged');
-		redirect('/welcome', 'refresh');
+	public function get_all() {
+		$this -> data['query'] = $this -> report -> get_user_mount();
+		$this -> load -> view('report_admin', $this -> data);
 	}
 
 }

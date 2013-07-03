@@ -17,5 +17,16 @@ class Report_Model extends CI_Model {
 		return $this -> db -> get('bla_customer');
 	}
 
+	public function get_user_all() {
+		$this -> db -> where('role', "2");
+		return $this -> db -> get('bla_users');
+	}
+
+	public function get_user_mount() {
+		$sql = "select * from bla_users,bla_customer where bla_users.user_id = bla_customer.user_id and bla_users.role=2";
+		$query = $this -> db -> query($sql);
+		return $query;
+	}
+
 }
 ?>

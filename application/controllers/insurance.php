@@ -106,7 +106,7 @@ class insurance extends CI_Controller {
 			$Insurance = $rates_result[0] -> Type;
 			$total = $Budget / 5000 * $Rate;
 			$PayYear = $Paid + $old;
-			$ProtectYear = $Contractz;
+			$ProtectYear = $Contract;
 			$ProtectEnd = date("Y") + $Contract;
 
 			/*------Plan B------*/
