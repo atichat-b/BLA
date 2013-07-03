@@ -11,29 +11,29 @@
 		<script>
 			$(function() {
 				$('#datepicker').datepicker({
-				changeMonth: true,
-				changeYear: true,
-				dateFormat: 'yy-mm',
-				onClose: function(dateText, inst) {
-				var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
-				var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-				$(this).datepicker('setDate', new Date(year, month, 1));
-				},
-				beforeShow: function(input, inst) {
-				if ((datestr = $(this).val()).length > 0) {
-				year = datestr.substring(datestr.length - 4, datestr.length);
-				month = jQuery.inArray(datestr.substring(0, datestr.length - 5), $(this).datepicker('option', 'monthNames'));
-				$(this).datepicker('option', 'defaultDate', new Date(year, month, 1));
-				$(this).datepicker('setDate', new Date(year, month, 1));
-				}
-				}
+					changeMonth : true,
+					changeYear : true,
+					dateFormat : 'yy-mm',
+					onClose : function(dateText, inst) {
+						var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+						var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+						$(this).datepicker('setDate', new Date(year, month, 1));
+					},
+					beforeShow : function(input, inst) {
+						if (( datestr = $(this).val()).length > 0) {
+							year = datestr.substring(datestr.length - 4, datestr.length);
+							month = jQuery.inArray(datestr.substring(0, datestr.length - 5), $(this).datepicker('option', 'monthNames'));
+							$(this).datepicker('option', 'defaultDate', new Date(year, month, 1));
+							$(this).datepicker('setDate', new Date(year, month, 1));
+						}
+					}
 				});
-				});
+			});
 		</script>
 		<style>
-.ui-datepicker-calendar {
-display: none;
-}
+			.ui-datepicker-calendar {
+				display: none;
+			}
 </style>
 	</head>
 	<body>
@@ -77,8 +77,8 @@ display: none;
 				          <th style="width: 150px; text-align: center;">ชื่อ</th>
 				          <th style="width: 50px; text-align: center;">เพศ</th>
 				          <th style="width: 50px; text-align: center;">อายุ</th>
-				          <th style="width: 300px; text-align: center;">ที่อยู่</th>
-				          <th></th>
+				          <th style="width: 350px; text-align: center;">ที่อยู่</th>
+				          <th style="width: 100px; text-align: center;">เพิ่มเมื่อ</th>
 				        </tr>
 				      </thead>
 				      <tbody>
@@ -99,29 +99,11 @@ display: none;
 				          <td style="width: 10px; text-align: center;"><?= $sex; ?></td>
 				          <td style="width: 10px; text-align: center;"><?= $row -> Old; ?></td>
 				          <td><?= substr($row -> Address, 0, 50); ?></td>
-				          <td>
-				          	  <a href="<?=site_url('insurance/plan/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal" class="btn btn-mini"><i class="icon-retweet"></i></a>
-				          	  &nbsp;&nbsp;
-				              <a href="<?=site_url('user/edit/' . ($row -> Customer_ID)); ?>"><i class="icon-pencil"></i></a>
-				              <a href="<?=site_url('user/delete/' . ($row -> Customer_ID)); ?>" role="button" data-toggle="modal" onclick="return confirm('ยืนยันการลบข้อมูล')"><i class="icon-remove"></i></a>
-				          </td>
+				       	  <td><?=$row -> Date_Add; ?></td>
 				        </tr>	
 				        <?php $rowID++;
 							}
 						  ?>						  
-				        <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						    <div class="modal-header">
-						        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						        <h3 id="myModalLabel">Delete Confirmation</h3>
-						    </div>
-						    <div class="modal-body">
-						        <p class="error-text">Are you sure you want to delete the user?</p>
-						    </div>
-						    <div class="modal-footer">
-						        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-						        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
-						    </div>
-						</div>
 				      </tbody>
 				    </table>
 				 </div>

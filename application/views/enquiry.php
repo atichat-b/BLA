@@ -52,7 +52,7 @@
 				<div class="control-group">
 					<label class="control-label">ชื่อ*</label>
 					<div class="controls">
-						<input id="first-name" name="f_name" type="text" placeholder="ชื่อ" class="input">
+						<input id="first-name" name="f_name" type="text" placeholder="ชื่อ" class="input"><?php echo form_error('f_name'); ?>
 					</div>
 				</div>
 				<!-- last-name input-->
@@ -73,7 +73,7 @@
 				<div class="control-group">
 					<label class="control-label">วันเกิด*</label>
 					<div class="controls">
-						<input id="birthday" name="birthday" placeholder="วัน/เดือน/ปี " type="text" onChange="Convertdate(this)">
+						<input id="birthday" name="birthday" placeholder="วัน/เดือน/ปี " type="text" onChange="Convertdate(this)"><?php echo form_error('birthday[]'); ?>
 					</div>
 				</div>
 				<!-- Old input-->
@@ -224,7 +224,7 @@
 				<div class="control-group">
 					<label class="control-label">เบอร์มือถือ*</label>
 					<div class="controls">
-						<input id="mobile" name="mobile" type="text" placeholder="เบอร์มือถือ" class="input">
+						<input id="mobile" name="mobile" type="text" placeholder="เบอร์มือถือ" class="input"><?php echo form_error('income_salary'); ?>
                                                  ถ้าไม่มีให้กรอก "00"
 					</div>
 				</div>
@@ -235,7 +235,7 @@
 				<div class="control-group">
 					<label class="control-label">รายได้ประจำ*</label>
 					<div class="controls">
-						<input id="income_salary" name="income_salary" type="text" placeholder="รายได้ประจำ" class="input" onKeyup="Total()"  OnChange="JavaScript:chkNum(this)">
+						<input id="income_salary" name="income_salary" type="text" placeholder="รายได้ประจำ" class="input" onKeyup="Total()"  OnChange="JavaScript:chkNum(this)"><?php echo form_error('income_salary'); ?>
 						ต่อเดือน
 					</div>
 				</div>
