@@ -22,8 +22,14 @@ class Report_Model extends CI_Model {
 		return $this -> db -> get('bla_users');
 	}
 
-	public function get_user_mount() {
+	public function get_user_month() {
 		$sql = "select * from bla_users,bla_customer where bla_users.user_id = bla_customer.user_id and bla_users.role=2";
+		$query = $this -> db -> query($sql);
+		return $query;
+	}
+
+	public function get_user_selectmonth($date) {
+		$sql = "select * from bla_users,bla_customer where bla_users.user_id = bla_customer.user_id and bla_users.role=2 and bla_customer.Date_Add LIKE '%$date%'";
 		$query = $this -> db -> query($sql);
 		return $query;
 	}

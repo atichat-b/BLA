@@ -63,7 +63,7 @@
 			</div>
 			<div class="well span11 form-horizontal" style="float:none;margin:0 auto">
 			  <div class="btn-toolbar">
-				    <?=form_open('report/get_date', array("class" => "form-search pull-right")); ?>
+				    <?=form_open('report/get_all_month', array("class" => "form-search pull-right")); ?>
 					<div class="input-append">
 					    <input type="text" name="datepicker" id="datepicker" class="span2 search-query">
 					    <button type="submit" class="btn">ค้นหา</button>
@@ -73,10 +73,10 @@
 				    <table class="table">
 				      <thead>
 				        <tr>
-				          <th>#</th>
-				          <th style="width: 150px; text-align: center;">ชื่อ</th>
+				          <th style="width: 50px;">#</th>
+				          <th style="width: 50px; text-align: center;">ชื่อ</th>
+				          <th></th>
 				          <th style="width: 50px; text-align: center;">จำนวน</th>
-
 				        </tr>
 				      </thead>
 				      <tbody>
@@ -91,6 +91,7 @@
 								<tr>
 						          <td>$rowID</td>
 						          <td>$key</td>
+						          <td></td>
 						          <td style=\"width: 10px; text-align: center;\">".count($rows['customer'])."</td>
 						        </tr>
 							";
