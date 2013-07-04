@@ -75,35 +75,28 @@
 				        <tr>
 				          <th>#</th>
 				          <th style="width: 150px; text-align: center;">ชื่อ</th>
-				          <th style="width: 50px; text-align: center;">เพศ</th>
-				          <th style="width: 50px; text-align: center;">อายุ</th>
-				          <th style="width: 350px; text-align: center;">ที่อยู่</th>
-				          <th style="width: 100px; text-align: center;">เพิ่มเมื่อ</th>
+				          <th style="width: 50px; text-align: center;">จำนวน</th>
+
 				        </tr>
 				      </thead>
 				      <tbody>
-				      	<?php 
-				      	$rowID = 1;
-				      	 foreach($query->result() as $row) {
-				      		$sex ="";	
-				      		if($row -> Sex == "male"){
-				      			$sex = "ชาย";
-				      		}
-							else{
-								$sex = "หญิง";
-							}
-				      		?>
-				        <tr>
-				          <td><?= $rowID; ?></td>
-				          <td><?= $row -> F_Name . " " . $row -> L_Name; ?></td>
-				          <td style="width: 10px; text-align: center;"><?= $sex; ?></td>
-				          <td style="width: 10px; text-align: center;"><?= $row -> Old; ?></td>
-				          <td><?= substr($row -> Address, 0, 50); ?></td>
-				       	  <td><?=$row -> Date_Add; ?></td>
-				        </tr>	
-				        <?php $rowID++;
-							}
-						  ?>						  
+				      	<?php
+						$user = array();
+						foreach($query->result() as $row):
+							$user[$row -> username]['customer'][] = $row->Customer_ID;
+						endforeach;
+						$rowID = 1;
+				      	foreach($user as $key => $rows):
+							echo "
+								<tr>
+						          <td>$rowID</td>
+						          <td>$key</td>
+						          <td style=\"width: 10px; text-align: center;\">".count($rows['customer'])."</td>
+						        </tr>
+							";
+						$rowID++;
+						endforeach;
+				      	?>
 				      </tbody>
 				    </table>
 				 </div>

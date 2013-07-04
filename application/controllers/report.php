@@ -28,6 +28,12 @@ class report extends CI_Controller {
 
 		$this -> load -> view('report_user', $this -> data);
 	}
+	
+	public function test() {
+		$this -> data['query'] = $this -> report -> get_user_mount();
+
+		$this -> load -> view('report_admin', $this -> data);
+	}
 
 	public function get_all() {
 		$this -> data['query'] = $this -> report -> get_user_mount();
