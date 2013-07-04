@@ -17,9 +17,12 @@
 			</p>
               <div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">BLA : ขั้นตอน</a>
+					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
-						<li class="active">
+						<li>
+							<a href="<?=base_url(); ?>report"><b>รายงานประจำเดิอน</b></a>
+						</li>
+                                                <li class="active">
 							<a href="#">1.ข้อมูลลูกค้า</a>
 						</li>
                         <li>
@@ -27,9 +30,6 @@
 						</li>
                         <li>
 							<a href="#">3.รายงาน</a>
-						</li>
-						<li>
-							<a href="<?=base_url();?>report"><b>สรุปผลประจำเดิอน</b></a>
 						</li>
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>

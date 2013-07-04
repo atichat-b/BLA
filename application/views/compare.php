@@ -15,18 +15,21 @@
           <p class="page_title"></p>
 			<div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">BLA : ขั้นตอน</a>
+					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
 						<li>
-							<a href="<?=base_url(); ?>user">1.ข้อมูลลูกค้า</a>
+							<a href="<?=base_url(); ?>report"><b>รายงานประจำเดิอน</b></a>
 						</li>
-						<li>
+                                                <li>
+							<a href="#">1.ข้อมูลลูกค้า</a>
+						</li>
+                        <li>
 							<a href="#">2.ความต้องการ</a>
 						</li>
-						<li class="active">
+                                                 <li class="active">
 							<a href="#">3.รายงาน</a>
 						</li>
-					</ul>
+                                          </ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?>
 						| <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
 				</div>

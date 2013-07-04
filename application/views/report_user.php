@@ -43,9 +43,12 @@
 			</p>
               <div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">BLA : ขั้นตอน</a>
+					<a class="brand" href="#">BLA</a>
 					<ul class="nav">
-						<li>
+						<li class="active">
+							<a href="<?=base_url(); ?>report"><b>รายงานประจำเดิอน</b></a>
+						</li>
+                                                <li>
 							<a href="<?=base_url(); ?>user">1.ข้อมูลลูกค้า</a>
 						</li>
                         <li>
@@ -54,9 +57,7 @@
                         <li>
 							<a href="report">3.รายงาน</a>
 						</li>
-						<li class="active">
-							<a href="<?=base_url(); ?>report"><b>สรุปผลประจำเดิอน</b></a>
-						</li>
+						
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
 				</div>
@@ -65,8 +66,8 @@
 			  <div class="btn-toolbar">
 				    <?=form_open('report/get_date', array("class" => "form-search pull-right")); ?>
 					<div class="input-append">
-					    <input type="text" name="datepicker" id="datepicker" class="span2 search-query">
-					    <button type="submit" class="btn">ค้นหา</button>
+					    <input type="text" name="datepicker" id="datepicker" class="span2 search-query" placeholder="วันที่">
+                                            <button type="submit" class="btn">ค้นหา</button>
 				 	</div>
 				  	<?=form_close(); ?>
 				</div>
@@ -78,7 +79,7 @@
 				          <th style="width: 50px; text-align: center;">เพศ</th>
 				          <th style="width: 50px; text-align: center;">อายุ</th>
 				          <th style="width: 350px; text-align: center;">ที่อยู่</th>
-				          <th style="width: 100px; text-align: center;">เพิ่มเมื่อ</th>
+				          <th style="width: 100px; text-align: center;">วันที่บันทึก</th>
 				        </tr>
 				      </thead>
 				      <tbody>
