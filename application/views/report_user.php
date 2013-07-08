@@ -43,11 +43,16 @@
 			</p>
               <div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">BLA</a>
+					<a class="brand" href="#">BLA :</a>
 					<ul class="nav">
 						<li class="active">
 							<a href="<?=base_url(); ?>report"><b>รายงานประจำเดิอน</b></a>
 						</li>
+                                               <? $role = $this -> session -> userdata('role');
+							if ($role == 1) {
+								echo "<li class=''><a href='/report/get_all'><b>รายงานใต้สังกัด</b></a></li>";
+							}
+						?>
                                                 <li>
 							<a href="<?=base_url(); ?>user">1.ข้อมูลลูกค้า</a>
 						</li>
@@ -66,7 +71,7 @@
 			  <div class="btn-toolbar">
 				    <?=form_open('report/get_date', array("class" => "form-search pull-right")); ?>
 					<div class="input-append">
-					    <input type="text" name="datepicker" id="datepicker" class="span2 search-query" placeholder="วันที่">
+					    <input type="text" name="datepicker" id="datepicker" class="span2 search-query" placeholder="เดือน">
                                             <button type="submit" class="btn">ค้นหา</button>
 				 	</div>
 				  	<?=form_close(); ?>

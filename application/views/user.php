@@ -17,19 +17,24 @@
 			</p>
               <div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">BLA</a>
+					<a class="brand" href="#">BLA :</a>
 					<ul class="nav">
 						<li>
 							<a href="<?=base_url(); ?>report"><b>รายงานประจำเดิอน</b></a>
 						</li>
+                                               <? $role = $this -> session -> userdata('role');
+							if ($role == 1) {
+								echo "<li class=''><a href='/report/get_all'><b>รายงานใต้สังกัด</b></a></li>";
+							}
+						?>
                                                 <li class="active">
-							<a href="#">1.ข้อมูลลูกค้า</a>
+							<a href="<?=base_url(); ?>user">1.ข้อมูลลูกค้า</a>
 						</li>
                         <li>
 							<a href="#">2.ความต้องการ</a>
 						</li>
                         <li>
-							<a href="#">3.รายงาน</a>
+							<a href="report">3.รายงาน</a>
 						</li>
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>

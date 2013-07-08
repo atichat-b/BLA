@@ -43,9 +43,17 @@
 			</p>
               <div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">BLA : ขั้นตอน</a>
+					<a class="brand" href="#">BLA :</a>
 					<ul class="nav">
-						<li>
+					<li>
+							<a href="<?=base_url(); ?>report"><b>รายงานประจำเดิอน</b></a>
+						</li>	
+                                            <? $role = $this -> session -> userdata('role');
+							if ($role == 1) {
+								echo "<li class=''><a href='/report/get_all'><b>รายงานใต้สังกัด</b></a></li>";
+							}
+						?>
+                                                <li>
 							<a href="<?=base_url(); ?>user">1.ข้อมูลลูกค้า</a>
 						</li>
                         <li>
@@ -54,9 +62,8 @@
                         <li>
 							<a href="report">3.รายงาน</a>
 						</li>
-						<li class="active">
-							<a href="<?=base_url(); ?>report"><b>สรุปผลประจำเดิอน</b></a>
-						</li>
+						
+						
 					</ul>
 					<span style="float: right; margin-top:10px;"><?= $this -> session -> userdata('Fname') . " " . $this -> session -> userdata('Lname'); ?> | <a href="<?=base_url('login/logout'); ?>" onclick="return confirm('คุณต้องการออกจากระบบใช่หรือไม่ ?')">Logout</a></span>
 				</div>
@@ -74,13 +81,15 @@
 				      <thead>
 				        <tr>
 				          <th style="width: 50px;">#</th>
-				          <th style="width: 50px; text-align: center;">ชื่อ</th>
-				          <th></th>
-				          <th style="width: 50px; text-align: center;">จำนวน</th>
+				          <th style="width: 80px; text-align: center;">รหัสตัวแทน</th>
+                                          <th></th>
+                                           <th style="width: 50px; text-align: center;">จำนวน</th>
+                                          
 				        </tr>
 				      </thead>
 				      <tbody>
 				      	<?php
+						
 						$user = array();
 						foreach($query->result() as $row):
 							$user[$row -> username]['customer'][] = $row->Customer_ID;

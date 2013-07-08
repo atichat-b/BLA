@@ -235,7 +235,7 @@
 					<label class="control-label">รายได้ประจำ</label>
 					<div class="controls">
 						<input id="income_salary" name="income_salary" type="text" placeholder="รายได้ประจำ" class="input" onKeyup="Total()" value="<?=$query -> Income_money; ?>" OnChange="JavaScript:chkNum(this)">
-						ต่อเดือน
+						ต่อปี
 					</div>
 				</div>
 				<!-- moblie input -->
@@ -243,7 +243,7 @@
 					<label class="control-label">รายได้อื่นๆ</label>
 					<div class="controls">
 						<input id="income_other" name="income_other" type="text" placeholder="รายได้อื่นๆ" class="input" onKeyup="Total()" value="<?=$query -> Income_other; ?>" OnChange="JavaScript:chkNum(this)">
-						ต่อเดือน
+						ต่อปี
 					</div>
 				</div>
 				<!-- moblie input -->

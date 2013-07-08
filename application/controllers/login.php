@@ -27,7 +27,7 @@ class login extends CI_Controller {
 				redirect('/user', 'refresh');
 
 			} else {
-				$alert = html_entity_decode("กรุณารหัสตัวแทนเหรือพสาเวิร์ต");
+				$alert = html_entity_decode("กรุณากรอกรหัสตัวแทนเหรือรหัสผ่าน");
 				echo "<script language='javascript'> alert('" . $alert . "');window.location='" . site_url('/login') . "';</script>";
 			}
 		} else {
